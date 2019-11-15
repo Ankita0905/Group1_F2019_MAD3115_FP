@@ -10,6 +10,16 @@ import UIKit
 
 class AddCustomerDetailViewController: UIViewController {
 
+    
+   
+    @IBOutlet weak var fixedtypeView: UIView!
+    @IBOutlet weak var commissionView: UIView!
+    @IBOutlet weak var partTimeTypeSeg: UISegmentedControl!
+    @IBOutlet weak var partTimeTypeView: UIView!
+    @IBOutlet weak var fullTimeDataView: UIView!
+    @IBOutlet weak var internDataView: UIView!
+    @IBOutlet weak var empTypeSeg: UISegmentedControl!
+    
     @IBOutlet weak var txtDatePicker: UITextField!
     @IBOutlet weak var firstNameTxtField: UITextField!
     
@@ -46,6 +56,19 @@ class AddCustomerDetailViewController: UIViewController {
        @objc func cancelDatePicker(){
            self.view.endEditing(true)
        }
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+    
+    
+    
     
     
     
@@ -103,11 +126,50 @@ class AddCustomerDetailViewController: UIViewController {
         super.viewDidLoad()
         saveCustomerButton()
         self.showDatePicker()
+      
         self.txtDatePicker.resignFirstResponder()
+        fullTimeDataView.isHidden=true
+        internDataView.isHidden=false
+        partTimeTypeView.isHidden=true
+        commissionView.isHidden=false
+        fixedtypeView.isHidden=true
         // Do any additional setup after loading the view.
     }
     
 
+    @IBAction func empTypeActionSeg(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            internDataView.isHidden = false
+            fullTimeDataView.isHidden=true
+            partTimeTypeView.isHidden=true
+        case 1:
+            fullTimeDataView.isHidden = false
+            internDataView.isHidden=true
+            partTimeTypeView.isHidden=true
+        case 2:
+            partTimeTypeView.isHidden=false
+            fullTimeDataView.isHidden=true
+            internDataView.isHidden = true
+            
+      
+        default:
+            print("")
+        }
+    }
     
-
+    @IBAction func partTimeTypeActionSeg(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            commissionView.isHidden=false
+            fixedtypeView.isHidden=true
+        case 1:
+            fixedtypeView.isHidden=false
+            commissionView.isHidden=true
+       
+        default:
+            print("")
+        }
+    }
+    
 }
