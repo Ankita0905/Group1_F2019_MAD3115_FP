@@ -12,6 +12,7 @@ class AddEmployeeDetailViewController: UIViewController {
 
     
    
+    @IBOutlet weak var txtSchoolName: UITextField!
     @IBOutlet weak var fixedtypeView: UIView!
     @IBOutlet weak var commissionView: UIView!
     @IBOutlet weak var partTimeTypeSeg: UISegmentedControl!
@@ -31,7 +32,7 @@ class AddEmployeeDetailViewController: UIViewController {
     
      let datePicker = UIDatePicker()
     
-    let a 
+    let ins = Singleton.getInstance()
     
     func showDatePicker(){
           
@@ -87,12 +88,22 @@ class AddEmployeeDetailViewController: UIViewController {
         
         let first_Name = firstNameTxtField.text
         let last_Name = lastNameTxtField.text
+        let full_name=first_Name!+" "+last_Name!
+        
+            
+        
         
         if isValidEmail()
         {
             
             let email = emailTxtField.text
-//            a1
+            if empTypeSeg.selectedSegmentIndex == 0{
+            ins.addInternEmployee(EID: 1, EName: full_name, EDOB:datePicker.date, EType: "Intern", Ischool: txtSchoolName.text!)
+                
+                print(full_name)
+                
+                
+            }
             let alert = UIAlertController(title: "Customer Added", message: "Congrats!", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(alert:UIAlertAction!) in self.navigationController?.popViewController(animated: true)
                 

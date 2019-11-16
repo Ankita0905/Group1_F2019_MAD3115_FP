@@ -70,7 +70,7 @@
         <!--Login-->
         <scene sceneID="doZ-rz-1OC">
             <objects>
-                <viewController id="DU0-Pc-hS4" customClass="LoginViewController" customModule="C0769647_MidTerm_MAD3115F2019" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="DU0-Pc-hS4" customClass="LoginViewController" customModule="Group1_F2019_MAD115_FP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5wu-Dn-UPn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -161,7 +161,7 @@
         <!--Customer List View Controller-->
         <scene sceneID="mEh-7Q-hRY">
             <objects>
-                <viewController storyboardIdentifier="CustomerListVC" id="JIZ-cp-Ybs" customClass="CustomerListViewController" customModule="C0769647_MidTerm_MAD3115F2019" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CustomerListVC" id="JIZ-cp-Ybs" customClass="CustomerListViewController" customModule="Group1_F2019_MAD115_FP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vUs-WG-IbR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -448,6 +448,7 @@
                         <outlet property="partTimeTypeSeg" destination="oiu-P0-5LS" id="Jcl-EZ-44R"/>
                         <outlet property="partTimeTypeView" destination="h0O-lF-01H" id="8G5-gE-isd"/>
                         <outlet property="txtDatePicker" destination="Ibx-r6-6D5" id="bjk-TT-UkF"/>
+                        <outlet property="txtSchoolName" destination="Kyh-5T-U7m" id="jHh-t9-Wzf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J9a-EY-Hi1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -457,7 +458,7 @@
         <!--Show Customer Details View Controller-->
         <scene sceneID="MWH-Pm-g5m">
             <objects>
-                <viewController storyboardIdentifier="detialsOfCustomerVC" id="SfW-Zo-jAE" customClass="ShowCustomerDetailsViewController" customModule="C0769647_MidTerm_MAD3115F2019" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="detialsOfCustomerVC" id="SfW-Zo-jAE" customClass="ShowCustomerDetailsViewController" customModule="Group1_F2019_MAD115_FP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tBB-Sl-mh9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -574,7 +575,7 @@
         <!--Add New Bill View Controller-->
         <scene sceneID="nbd-o6-zSH">
             <objects>
-                <viewController storyboardIdentifier="addBillViewContoller" id="TXp-KB-h72" customClass="AddNewBillViewController" customModule="C0769647_MidTerm_MAD3115F2019" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addBillViewContoller" id="TXp-KB-h72" customClass="AddNewBillViewController" customModule="Group1_F2019_MAD115_FP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="adq-CY-Es4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

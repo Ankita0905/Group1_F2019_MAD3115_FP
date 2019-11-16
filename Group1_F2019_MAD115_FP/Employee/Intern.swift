@@ -15,11 +15,7 @@ class Intern:Employee
     var schoolName:String
     
     
-    override init()
-       {
-           self.schoolName=String()
-        super.init()
-       }
+   
     
     init(IempID:Int,IName:String,SchoolName:String,IEmpType: String,IDOB : Date)
     {

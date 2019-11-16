@@ -9,7 +9,7 @@
 import UIKit
 
 class AddNewBillViewController: UIViewController {
-    var customerobject = Customer()
+  //  var customerobject = Customer()
     let datePicker = UIDatePicker()
     @IBOutlet weak var txtDatePicker: UITextField!
       @IBOutlet weak var txtBillAmount: UITextField!
@@ -58,49 +58,49 @@ class AddNewBillViewController: UIViewController {
     {
         if segmentBillTypeValue.selectedSegmentIndex==0
         {
-            MobilesaveBill()
+           // MobilesaveBill()
         }
         if segmentBillTypeValue.selectedSegmentIndex==1
         {
-            InternetsaveBill()
+           // InternetsaveBill()
         }
         if segmentBillTypeValue.selectedSegmentIndex==2
         {
-            HydrosaveBill()
+           // HydrosaveBill()
         }
         
     }
     
     
-     func MobilesaveBill()
-          {
-            let dictionarySize = ((customerobject.billDictionary.count))
-            let Bid = dictionarySize+1
-            let billAdd = Mobile(Id: Bid, billDate: datePicker.date, billType: billTypes.Mobile, totalBillAmount: (self.txtBillAmount?.text! as! NSString).floatValue, mobileManufacturer: "Samsung", planName: "Data + Text", mobileNumber: "9090909090", internetUsed: 3 , minuteUsed: 343)
-              let convertBill = billAdd as Bill
-            customerobject.billDictionary.updateValue( convertBill, forKey: dictionarySize + 1)
-            print(">>>>>>#$@")
-              self.navigationController?.popViewController(animated: true)
-          }
-     func HydrosaveBill()
-    {
-      let dictionarySize = ((customerobject.billDictionary.count))
-      let Bid = dictionarySize+1
-        let billAdd = Hydro(Id: Bid, billDate: datePicker.date, billType: billTypes.Hydro, totalBillAmount: (self.txtBillAmount?.text! as! NSString).floatValue, agencyName: "EneryHouse", unitconsumed: 231)
-        let convertBill = billAdd as Bill
-      customerobject.billDictionary.updateValue( convertBill, forKey: dictionarySize + 1)
-        self.navigationController?.popViewController(animated: true)
-    }
-   func InternetsaveBill()
-    {
-      let dictionarySize = ((customerobject.billDictionary.count))
-      let Bid = dictionarySize+2
-        print("Internet")
-        let billAdd = Internet(Id: Bid, billDate: datePicker.date, billType: billTypes.Internet, totalBillAmount: 123, providerName: "Bell", internetUsed: 344)
-        let convertBill = billAdd as Bill
-      customerobject.billDictionary.updateValue( convertBill, forKey: dictionarySize + 1)
-        self.navigationController?.popViewController(animated: true)
-    }
+//     func MobilesaveBill()
+//          {
+//            let dictionarySize = ((customerobject.billDictionary.count))
+//            let Bid = dictionarySize+1
+//            let billAdd = Mobile(Id: Bid, billDate: datePicker.date, billType: billTypes.Mobile, totalBillAmount: (self.txtBillAmount?.text! as! NSString).floatValue, mobileManufacturer: "Samsung", planName: "Data + Text", mobileNumber: "9090909090", internetUsed: 3 , minuteUsed: 343)
+//              let convertBill = billAdd as Bill
+//            customerobject.billDictionary.updateValue( convertBill, forKey: dictionarySize + 1)
+//            print(">>>>>>#$@")
+//              self.navigationController?.popViewController(animated: true)
+//          }
+//     func HydrosaveBill()
+//    {
+//      let dictionarySize = ((customerobject.billDictionary.count))
+//      let Bid = dictionarySize+1
+//        let billAdd = Hydro(Id: Bid, billDate: datePicker.date, billType: billTypes.Hydro, totalBillAmount: (self.txtBillAmount?.text! as! NSString).floatValue, agencyName: "EneryHouse", unitconsumed: 231)
+//        let convertBill = billAdd as Bill
+//      customerobject.billDictionary.updateValue( convertBill, forKey: dictionarySize + 1)
+//        self.navigationController?.popViewController(animated: true)
+//    }
+//   func InternetsaveBill()
+//    {
+//      let dictionarySize = ((customerobject.billDictionary.count))
+//      let Bid = dictionarySize+2
+//        print("Internet")
+//        let billAdd = Internet(Id: Bid, billDate: datePicker.date, billType: billTypes.Internet, totalBillAmount: 123, providerName: "Bell", internetUsed: 344)
+//        let convertBill = billAdd as Bill
+//      customerobject.billDictionary.updateValue( convertBill, forKey: dictionarySize + 1)
+//        self.navigationController?.popViewController(animated: true)
+//    }
     
      @IBAction func segmentBillType(_ sender: UISegmentedControl) {
            switch sender.selectedSegmentIndex {

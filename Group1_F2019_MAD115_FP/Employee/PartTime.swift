@@ -13,12 +13,12 @@ class PartTime:Employee
     var hoursworked:Float
 
   
-//    init(PTEmpID: Int,PTEmptype: String, PTEmpName:String,PTEmpAge:Int,Rate:Float,HoursWorked:Float,Vobj:Pojo.Vehicle)
-//    {
-//        self.rate=Rate
-//        self.hoursworked=HoursWorked
-//        super.init(EmpID: PTEmpID,EmpName:PTEmpName, EmpAge:PTEmpAge, EmpType: PTEmptype, Vobj: Vobj)
-//    }
+    init(PTEmpID: Int,PTEmptype: String, PTEmpName:String,PTEmpAge:Date,Rate:Float,HoursWorked:Float)
+    {
+        self.rate=Rate
+        self.hoursworked=HoursWorked
+        super.init(EmpID: PTEmpID,EmpName:PTEmpName, EmpDOB:PTEmpAge, EmpType: PTEmptype)
+   }
     
     
   

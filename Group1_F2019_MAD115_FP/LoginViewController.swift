@@ -59,7 +59,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let getdata =  Singleton.getInstance()
-        getdata.createCustomer()
+      //  getdata.createCustomer()
         userDefault = UserDefaults.standard
         if let userName = userDefault.value(forKey: "userName"){
             usernameTxtField.text = userName as? String

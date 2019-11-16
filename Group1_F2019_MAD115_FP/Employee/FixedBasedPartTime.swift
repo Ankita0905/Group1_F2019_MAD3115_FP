@@ -11,18 +11,14 @@ class FixedBasedPartTime:PartTime
 {
     var fixedAmount:Float
     
-//    init(FixTEmpID: Int, FixTEmptype: String, FixTEmpName: String, FixTEmpAge: Int,  Rate: Float, HoursWorked: Float,FixedAmount:Float,Vobj: Pojo.Vehicle) {
-//        self.fixedAmount=FixedAmount
-//        super.init(PTEmpID: FixTEmpID, PTEmptype: FixTEmptype, PTEmpName: FixTEmpName, PTEmpAge: FixTEmpAge, Rate: Rate, HoursWorked: HoursWorked, Vobj: Vobj)
-//    }
+    init(FixTEmpID: Int, FixTEmptype: String, FixTEmpName: String, FixTEmpAge: Date,  Rate: Float, HoursWorked: Float,FixedAmount:Float) {
+        self.fixedAmount=FixedAmount
+        super.init(PTEmpID: FixTEmpID, PTEmptype: FixTEmptype, PTEmpName: FixTEmpName, PTEmpAge: FixTEmpAge, Rate: Rate, HoursWorked: HoursWorked)
+    }
     
     override func calEarnings()->Float {
         return rate * hoursworked + fixedAmount
         
     }
-    override func printMyData() {
-        super.printMyData()
-        print(" Fixed Amount \(fixedAmount.currencyFormat())")
-        print(" Total Earnings : \(calEarnings().currencyFormat())")
-    }
+   
 }

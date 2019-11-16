@@ -22,22 +22,22 @@ class CustomerListViewController: UIViewController ,UITableViewDelegate,UITableV
         return 1
     }
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Customer List !"
+        return "Employee List !"
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return temp.returnCount()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let a = temp.returnCustomerObj(customerID: Int(indexPath.row+1))
+        let a = temp.returnEmployeeObj(empID: Int(indexPath.row+1))
         let cells = tableView.dequeueReusableCell(withIdentifier: "CustCell", for: indexPath)
-        cells.textLabel?.text = (a?.full_Name)!
+        cells.textLabel?.text = (a?.name)!
         return cells
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let rowselect=UIStoryboard(name: "Main", bundle: nil)
         let detailsVC=rowselect.instantiateViewController(withIdentifier: "detialsOfCustomerVC") as! ShowCustomerDetailsViewController
-        detailsVC.customerdetails=temp.returnCustomerObj(customerID: indexPath.row+1)!
+        detailsVC.employeeDetails=temp.returnEmployeeObj(empID: indexPath.row+1)
         navigationController?.pushViewController(detailsVC, animated: true)
         
         

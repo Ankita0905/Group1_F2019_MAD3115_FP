@@ -24,30 +24,30 @@ class Singleton : NSObject
     
     
     
-    func addEmployee(eid: Int,ename : String ,dob : Date,etype : String) {
-        let tmp = employeeDictionary.count+1
-        let emp=Employee(EmpID: tmp, EmpName: ename, EmpDOB: dob, EmpType: etype)
-        
-        
-    }
-    func addEmployeeDict(employee: Employee) {
-        employeeDictionary.updateValue(employee, forKey: employee.empID)
-    }
-    
-//    func addInternEmployee(EID : Int,EName:String,EDOB: Date,EType: String,Ischool: String)
-//           {
-//               let emp = employeeDictionary.count+1
-//            let temp = Intern(IempID: emp, IName: EName, SchoolName: Ischool, IEmpType: EType, IDOB: EDOB)
-//                self.addIemployee(Iemployee: temp)
+//    func addEmployee(eid: Int,ename : String ,dob : Date,etype : String) {
+//        let tmp = employeeDictionary.count+1
+//        let emp=Employee(EmpID: tmp, EmpName: ename, EmpDOB: dob, EmpType: etype)
 //
-//           }
 //
-//    func addIemployee(Iemployee: Intern)
-//    {
-//        employeeDictionary.updateValue(Iemployee, forKey: Iemployee.empID)
 //    }
-//
-//
+//    func addEmployeeDict(employee: Employee) {
+//        employeeDictionary.updateValue(employee, forKey: employee.empID)
+//    }
+    
+    func addInternEmployee(EID : Int,EName:String,EDOB: Date,EType: String,Ischool: String)
+           {
+               let emp = employeeDictionary.count+1
+            let temp = Intern(IempID: emp, IName: EName, SchoolName: Ischool, IEmpType: EType, IDOB: EDOB)
+                self.addIemployee(Iemployee: temp)
+
+           }
+
+    func addIemployee(Iemployee: Intern)
+    {
+        employeeDictionary.updateValue(Iemployee, forKey: Iemployee.empID)
+    }
+
+
         
         
         func returnEmployeeObj(empID : Int) -> Employee?

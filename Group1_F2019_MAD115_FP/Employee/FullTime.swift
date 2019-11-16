@@ -9,16 +9,16 @@
 import Foundation
 class FullTime:Employee
 {
-    var salary:Float
+    var salary:Float = 0.0
     var bonus:Float
     
     
-//    init(FTEmpID: Int,FTEmptype: String, FTEmpName:String,FTEmpAge:Int,Salary:Float,Bonus:Float)
-//    {
-//        self.salary=Salary
-//        self.bonus=Bonus
-//        super.init(EmpID: FTEmpID,EmpName:FTEmpName, EmpDOB:FTEmpAge,  EmpType: FTEmptype)
-//    }
+    init(FTEmpID: Int,FTEmptype: String, FTEmpName:String,FTEmpAge:Date,Salary:Float,Bonus:Float)
+    {
+        self.salary=Salary
+        self.bonus=Bonus
+        super.init(EmpID: FTEmpID,EmpName:FTEmpName, EmpDOB:FTEmpAge,  EmpType: FTEmptype)
+    }
     
     
   
