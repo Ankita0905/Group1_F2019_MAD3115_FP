@@ -13,7 +13,7 @@ class Employee
     var name: String
     var DOB: Date
     var empType : String
-    
+    var employeeDictionary  = [Int:Employee]()
     
     
     
@@ -25,13 +25,13 @@ class Employee
         DOB=EmpDOB
     
     }
-//    init()
-//    {
-//        self.empID=Int()
-//        self.name=String()
-//        self.DOB=Date()
-//        self.empType=String()
-//    }
+    init()
+    {
+        self.empID=Int()
+        self.name=String()
+        self.DOB=Date()
+        self.empType=String()
+    }
     
    
     

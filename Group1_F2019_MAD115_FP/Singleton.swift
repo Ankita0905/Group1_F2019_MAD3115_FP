@@ -9,7 +9,12 @@
 import Foundation
 class Singleton : NSObject
 {
-    private var employeeDictionary  = [Int:Employee]()
+    
+    
+    private var dict = Employee()
+    
+    
+  
       private static var object = Singleton()
    
        
@@ -36,15 +41,15 @@ class Singleton : NSObject
     
     func addInternEmployee(EID : Int,EName:String,EDOB: Date,EType: String,Ischool: String)
            {
-               let emp = employeeDictionary.count+1
-            let temp = Intern(IempID: emp, IName: EName, SchoolName: Ischool, IEmpType: EType, IDOB: EDOB)
+            let emp = dict.employeeDictionary.count+1
+            let temp = Intern(IempID: emp, IName: EName, ISchoolName: Ischool, IEmpType: EType, IDOB: EDOB)
                 self.addIemployee(Iemployee: temp)
 
            }
 
     func addIemployee(Iemployee: Intern)
     {
-        employeeDictionary.updateValue(Iemployee, forKey: Iemployee.empID)
+        dict.employeeDictionary.updateValue(Iemployee, forKey: Iemployee.empID)
     }
 
 
@@ -52,7 +57,7 @@ class Singleton : NSObject
         
         func returnEmployeeObj(empID : Int) -> Employee?
         {
-            for (k,v) in employeeDictionary
+            for (k,v) in dict.employeeDictionary
             {
                 if empID == k
                 {
@@ -64,7 +69,7 @@ class Singleton : NSObject
         }
         func returnCount() -> Int
         {
-            return employeeDictionary.count
+            return dict.employeeDictionary.count
         }
         
         

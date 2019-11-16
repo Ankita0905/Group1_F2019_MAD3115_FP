@@ -11,6 +11,7 @@ import UIKit
 class ShowCustomerDetailsViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     var employeeDetails:Employee?=nil
+    var employeeInternDetails:Intern?=nil
     @IBOutlet weak var idView: UILabel!
     @IBOutlet weak var firstNameView: UILabel!
     @IBOutlet weak var totalAmountView: UILabel!
@@ -20,10 +21,12 @@ class ShowCustomerDetailsViewController: UIViewController,UITableViewDelegate,UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         idView.text="\(String(describing: employeeDetails!.empID))"
-        firstNameView.text=employeeDetails?.name
+        firstNameView.text=employeeInternDetails?.name
         lastNameView.text=employeeDetails?.name
-        emailView.text=employeeDetails?.empType
+        print(employeeInternDetails?.schoolName)
+        emailView.text=employeeInternDetails?.schoolName
 //        totalAmountView.text="\(String(describing: customerdetails!.totalBillAmout.currency()))"
         addBillButton()
         self.billListTable.delegate=self

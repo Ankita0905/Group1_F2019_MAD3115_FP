@@ -99,7 +99,7 @@ class AddEmployeeDetailViewController: UIViewController {
             let email = emailTxtField.text
             if empTypeSeg.selectedSegmentIndex == 0{
             ins.addInternEmployee(EID: 1, EName: full_name, EDOB:datePicker.date, EType: "Intern", Ischool: txtSchoolName.text!)
-                
+                print(txtSchoolName.text!)
                 print(full_name)
                 
                 

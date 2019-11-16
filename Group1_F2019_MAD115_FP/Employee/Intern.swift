@@ -17,15 +17,20 @@ class Intern:Employee
     
    
     
-    init(IempID:Int,IName:String,SchoolName:String,IEmpType: String,IDOB : Date)
+    init(IempID:Int,IName:String,ISchoolName:String,IEmpType: String,IDOB : Date)
     {
-        self.schoolName=SchoolName
+        print(ISchoolName)
+        self.schoolName=ISchoolName
+        print("welcome\(schoolName)")
         super.init(EmpID: IempID, EmpName: IName, EmpDOB: IDOB,  EmpType: IEmpType)
         
     }
     
    
-    
+    override init() {
+        self.schoolName=String()
+        super.init()
+    }
    
    
    
