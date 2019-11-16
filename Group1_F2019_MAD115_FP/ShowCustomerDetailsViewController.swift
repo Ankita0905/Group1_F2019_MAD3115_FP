@@ -32,7 +32,7 @@ class ShowCustomerDetailsViewController: UIViewController,UITableViewDelegate,UI
         lastNameView.text=employeeInternDetails?.name
         //print(employeeInternDetails?.schoolName)
         emailView.text=employeeInternDetails?.schoolName
-//        totalAmountView.text="\(String(describing: customerdetails!.totalBillAmout.currency()))"
+            totalAmountView.text="\(String(describing: employeeInternDetails!.calEarnings().currencyFormat()))"
         }
         else if employeeDetails?.empType=="FullTime"
         {
@@ -41,7 +41,7 @@ class ShowCustomerDetailsViewController: UIViewController,UITableViewDelegate,UI
                firstNameView.text=employeeFullTimeDetails?.name
                lastNameView.text=employeeFullTimeDetails?.name
                emailView.text=("\(String(describing: employeeFullTimeDetails!.bonus))")
-                totalAmountView.text=("\(String(describing: employeeFullTimeDetails!.calEarnings()))")
+            totalAmountView.text=("\(String(describing: employeeFullTimeDetails!.calEarnings().currencyFormat()))")
         }
         else if employeeDetails?.empType=="PartTime"
         {
@@ -50,7 +50,7 @@ class ShowCustomerDetailsViewController: UIViewController,UITableViewDelegate,UI
             firstNameView.text=employeeCommissionDetails?.name
             lastNameView.text=employeeCommissionDetails?.name
             emailView.text=("\(String(describing: employeeCommissionDetails!.commissionPer))")
-             totalAmountView.text=("\(String(describing: employeeCommissionDetails!.calEarnings()))")
+            totalAmountView.text=("\(String(describing: employeeCommissionDetails!.calEarnings().currencyFormat()))")
         }
         
         else if employeeDetails?.empType=="FixedBasedPartTime"
