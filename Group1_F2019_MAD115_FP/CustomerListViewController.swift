@@ -41,6 +41,8 @@ class CustomerListViewController: UIViewController ,UITableViewDelegate,UITableV
         detailsVC.employeeInternDetails=temp.returnEmployeeObj(empID: indexPath.row+1) as? Intern
         detailsVC.employeeFullTimeDetails=temp.returnEmployeeObj(empID: indexPath.row+1) as? FullTime
         detailsVC.employeeCommissionDetails=temp.returnEmployeeObj(empID: indexPath.row+1) as? CommissionBasedPartTime
+        detailsVC.employeeFixedDetails=temp.returnEmployeeObj(empID: indexPath.row+1) as? FixedBasedPartTime
+        
         navigationController?.pushViewController(detailsVC, animated: true)
         
         

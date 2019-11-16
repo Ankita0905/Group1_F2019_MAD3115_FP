@@ -116,7 +116,7 @@ class AddEmployeeDetailViewController: UIViewController {
                 }
                 else if partTimeTypeSeg.selectedSegmentIndex==1
                 {
-                
+                    ins.addFixedEmployee(FixID: 1, Fixtype: "FixedBased", FixName: full_name, FixDob: datePicker.date, Rate: rate, HoursWorked: hrsWorked, FixedAmount: fixedAmount)
                 }
             }
             

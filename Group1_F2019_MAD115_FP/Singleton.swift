@@ -39,6 +39,9 @@ class Singleton : NSObject
 //        employeeDictionary.updateValue(employee, forKey: employee.empID)
 //    }
     
+    
+    //Functions to add all types of Employees
+    
     func addInternEmployee(EID : Int,EName:String,EDOB: Date,EType: String,Ischool: String)
            {
             let emp = dict.employeeDictionary.count+1
