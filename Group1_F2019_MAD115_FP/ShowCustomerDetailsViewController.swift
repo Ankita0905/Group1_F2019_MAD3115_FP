@@ -13,6 +13,8 @@ class ShowCustomerDetailsViewController: UIViewController,UITableViewDelegate,UI
     var employeeDetails:Employee?=nil
     var employeeInternDetails:Intern?=nil
     var employeeFullTimeDetails:FullTime?=nil
+    var employeeCommissionDetails:CommissionBasedPartTime?=nil
+    var employeeFixedDetails:FixedBasedPartTime?=nil
     @IBOutlet weak var idView: UILabel!
     @IBOutlet weak var firstNameView: UILabel!
     @IBOutlet weak var totalAmountView: UILabel!
@@ -23,21 +25,37 @@ class ShowCustomerDetailsViewController: UIViewController,UITableViewDelegate,UI
     override func viewDidLoad() {
         super.viewDidLoad()
         //Intern employee
-        
+        if employeeDetails?.empType=="Intern"
+        {
         idView.text="\(String(describing: employeeInternDetails!.empID))"
         firstNameView.text=employeeInternDetails?.name
         lastNameView.text=employeeInternDetails?.name
         //print(employeeInternDetails?.schoolName)
         emailView.text=employeeInternDetails?.schoolName
 //        totalAmountView.text="\(String(describing: customerdetails!.totalBillAmout.currency()))"
-        
+        }
+        else if employeeDetails?.empType=="FullTime"
+        {
         //Full Time Employee
-        idView.text="\(String(describing: employeeFullTimeDetails!.empID))"
+               idView.text="\(String(describing: employeeFullTimeDetails!.empID))"
                firstNameView.text=employeeFullTimeDetails?.name
                lastNameView.text=employeeFullTimeDetails?.name
                //print(employeeFullTimeDetails?.schoolName)
-                emailView.text=("\(String(describing: employeeFullTimeDetails?.bonus))")
-        totalAmountView.text=("\(String(describing: employeeInternDetails?.calEarnings()))")
+                emailView.text=("\(String(describing: employeeFullTimeDetails!.bonus))")
+                totalAmountView.text=("\(String(describing: employeeFullTimeDetails!.calEarnings()))")
+        }
+        else if employeeDetails?.empType=="CommisssionBasedPartTime"
+        {
+        //CommissionBased Employee
+        }
+        
+        else if employeeDetails?.empType=="FixedBasedPartTime"
+        {
+            //FixedBased Employee
+        }
+        
+        
+        
         
         addBillButton()
         self.billListTable.delegate=self
