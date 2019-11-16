@@ -201,10 +201,10 @@
             </objects>
             <point key="canvasLocation" x="1971" y="-1338"/>
         </scene>
-        <!--Add Customer Detail View Controller-->
+        <!--Add Employee Detail View Controller-->
         <scene sceneID="3m6-fU-Y8O">
             <objects>
-                <viewController storyboardIdentifier="addCustDetailVC" id="qFz-V1-9ET" customClass="AddCustomerDetailViewController" customModule="C0769647_MidTerm_MAD3115F2019" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addCustDetailVC" id="qFz-V1-9ET" customClass="AddEmployeeDetailViewController" customModule="Group1_F2019_MAD115_FP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eg0-rO-PCB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

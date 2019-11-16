@@ -36,7 +36,7 @@ class ShowCustomerDetailsViewController: UIViewController,UITableViewDelegate,UI
      
      private func addBillButton()
      {
-         let btnAddBill=UIBarButtonItem(title: "Update Vehicle", style: .done, target: self, action: #selector(ShowCustomerDetailsViewController.addBill(sender:)))
+         let btnAddBill=UIBarButtonItem(title: "Add Bill", style: .done, target: self, action: #selector(ShowCustomerDetailsViewController.addBill(sender:)))
              navigationItem.rightBarButtonItem=btnAddBill
      }
      

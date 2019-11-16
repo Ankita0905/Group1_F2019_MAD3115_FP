@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddCustomerDetailViewController: UIViewController {
+class AddEmployeeDetailViewController: UIViewController {
 
     
    
@@ -27,9 +27,11 @@ class AddCustomerDetailViewController: UIViewController {
     
     @IBOutlet weak var lastNameTxtField: UITextField!
     
+    
+    
      let datePicker = UIDatePicker()
     
-    
+    let a 
     
     func showDatePicker(){
           
@@ -57,24 +59,9 @@ class AddCustomerDetailViewController: UIViewController {
            self.view.endEditing(true)
        }
     
-    
-    
-    
-    
-      
-      
-    
-    
-    
-    
-    
-    
-    
-    
-    
     private func saveCustomerButton()
     {
-        let saveBtn=UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(AddCustomerDetailViewController.saveCustomer(sender:)))
+        let saveBtn=UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(AddEmployeeDetailViewController.saveCustomer(sender:)))
     
         navigationItem.rightBarButtonItem=saveBtn
         
@@ -105,7 +92,7 @@ class AddCustomerDetailViewController: UIViewController {
         {
             
             let email = emailTxtField.text
-            a1.addNewCustomers(FirstName: first_Name!, LastName: last_Name!, Email: email!)
+//            a1
             let alert = UIAlertController(title: "Customer Added", message: "Congrats!", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(alert:UIAlertAction!) in self.navigationController?.popViewController(animated: true)
                 
@@ -121,7 +108,7 @@ class AddCustomerDetailViewController: UIViewController {
     }
     
     
-    let a1 = Singleton.getInstance()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         saveCustomerButton()
@@ -169,7 +156,10 @@ class AddCustomerDetailViewController: UIViewController {
        
         default:
             print("")
+    
         }
+    
     }
+    
     
 }
