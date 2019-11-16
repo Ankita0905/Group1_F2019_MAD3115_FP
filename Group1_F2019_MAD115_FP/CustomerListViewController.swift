@@ -38,7 +38,8 @@ class CustomerListViewController: UIViewController ,UITableViewDelegate,UITableV
         let rowselect=UIStoryboard(name: "Main", bundle: nil)
         let detailsVC=rowselect.instantiateViewController(withIdentifier: "detialsOfCustomerVC") as! ShowCustomerDetailsViewController
         detailsVC.employeeDetails=temp.returnEmployeeObj(empID: indexPath.row+1)!
-        detailsVC.employeeInternDetails=temp.returnEmployeeObj(empID: indexPath.row+1) as! Intern
+        detailsVC.employeeInternDetails=temp.returnEmployeeObj(empID: indexPath.row+1) as? Intern
+        detailsVC.employeeFullTimeDetails=temp.returnEmployeeObj(empID: indexPath.row+1) as? FullTime
         navigationController?.pushViewController(detailsVC, animated: true)
         
         

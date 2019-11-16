@@ -447,7 +447,9 @@
                         <outlet property="lastNameTxtField" destination="na5-KW-wWT" id="qaf-TP-8XJ"/>
                         <outlet property="partTimeTypeSeg" destination="oiu-P0-5LS" id="Jcl-EZ-44R"/>
                         <outlet property="partTimeTypeView" destination="h0O-lF-01H" id="8G5-gE-isd"/>
+                        <outlet property="txtBonus" destination="OIO-dx-Pln" id="ITY-li-t1d"/>
                         <outlet property="txtDatePicker" destination="Ibx-r6-6D5" id="bjk-TT-UkF"/>
+                        <outlet property="txtSalary" destination="FDH-XZ-3uf" id="Vs2-Vt-o4E"/>
                         <outlet property="txtSchoolName" destination="Kyh-5T-U7m" id="jHh-t9-Wzf"/>
                     </connections>
                 </viewController>

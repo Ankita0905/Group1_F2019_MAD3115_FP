@@ -28,7 +28,9 @@ class AddEmployeeDetailViewController: UIViewController {
     
     @IBOutlet weak var lastNameTxtField: UITextField!
     
+    @IBOutlet weak var txtSalary: UITextField!
     
+    @IBOutlet weak var txtBonus: UITextField!
     
      let datePicker = UIDatePicker()
     
@@ -89,8 +91,8 @@ class AddEmployeeDetailViewController: UIViewController {
         let first_Name = firstNameTxtField.text
         let last_Name = lastNameTxtField.text
         let full_name=first_Name!+" "+last_Name!
-        
-            
+        let salary=(txtSalary.text! as NSString).floatValue
+        let bonus=(txtBonus.text! as NSString).floatValue
         
         
         if isValidEmail()
@@ -99,11 +101,14 @@ class AddEmployeeDetailViewController: UIViewController {
             let email = emailTxtField.text
             if empTypeSeg.selectedSegmentIndex == 0{
             ins.addInternEmployee(EID: 1, EName: full_name, EDOB:datePicker.date, EType: "Intern", Ischool: txtSchoolName.text!)
-                print(txtSchoolName.text!)
-                print(full_name)
-                
-                
+//                print(txtSchoolName.text!)
+//                print(full_name)
             }
+            
+            else if empTypeSeg.selectedSegmentIndex == 1{
+                ins.addFullTimeEmployee(FTID: 2, FTtype: "FullTime", FTEName: full_name, FTDob: datePicker.date, FTSalary: salary, FTBonus: bonus)
+            }
+            
             let alert = UIAlertController(title: "Customer Added", message: "Congrats!", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(alert:UIAlertAction!) in self.navigationController?.popViewController(animated: true)
                 

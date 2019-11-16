@@ -52,7 +52,17 @@ class Singleton : NSObject
         dict.employeeDictionary.updateValue(Iemployee, forKey: Iemployee.empID)
     }
 
+    func addFullTimeEmployee(FTID: Int,FTtype: String,FTEName:String,FTDob:Date,FTSalary:Float,FTBonus:Float)
+    {
+        let emp1=dict.employeeDictionary.count+1
+        let temp2=FullTime(FTEmpID: emp1, FTEmptype: FTtype, FTEmpName: FTEName, FTDob: FTDob, Salary: FTSalary, Bonus: FTBonus)
+        self.addFTemployee(FTEmployee: temp2)
+    }
 
+    func addFTemployee(FTEmployee:FullTime)
+    {
+        dict.employeeDictionary.updateValue(FTEmployee, forKey: FTEmployee.empID)
+    }
         
         
         func returnEmployeeObj(empID : Int) -> Employee?

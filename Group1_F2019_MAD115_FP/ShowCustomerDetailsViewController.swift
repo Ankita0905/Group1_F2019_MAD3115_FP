@@ -12,6 +12,7 @@ class ShowCustomerDetailsViewController: UIViewController,UITableViewDelegate,UI
     
     var employeeDetails:Employee?=nil
     var employeeInternDetails:Intern?=nil
+    var employeeFullTimeDetails:FullTime?=nil
     @IBOutlet weak var idView: UILabel!
     @IBOutlet weak var firstNameView: UILabel!
     @IBOutlet weak var totalAmountView: UILabel!
@@ -21,13 +22,23 @@ class ShowCustomerDetailsViewController: UIViewController,UITableViewDelegate,UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Intern employee
         
-        idView.text="\(String(describing: employeeDetails!.empID))"
+        idView.text="\(String(describing: employeeInternDetails!.empID))"
         firstNameView.text=employeeInternDetails?.name
-        lastNameView.text=employeeDetails?.name
-        print(employeeInternDetails?.schoolName)
+        lastNameView.text=employeeInternDetails?.name
+        //print(employeeInternDetails?.schoolName)
         emailView.text=employeeInternDetails?.schoolName
 //        totalAmountView.text="\(String(describing: customerdetails!.totalBillAmout.currency()))"
+        
+        //Full Time Employee
+        idView.text="\(String(describing: employeeFullTimeDetails!.empID))"
+               firstNameView.text=employeeFullTimeDetails?.name
+               lastNameView.text=employeeFullTimeDetails?.name
+               //print(employeeFullTimeDetails?.schoolName)
+                emailView.text=("\(String(describing: employeeFullTimeDetails?.bonus))")
+        totalAmountView.text=("\(String(describing: employeeInternDetails?.calEarnings()))")
+        
         addBillButton()
         self.billListTable.delegate=self
         self.billListTable.dataSource=self
