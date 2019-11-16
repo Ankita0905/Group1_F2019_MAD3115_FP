@@ -53,8 +53,9 @@ class ShowCustomerDetailsViewController: UIViewController,UITableViewDelegate,UI
             totalAmountView.text=("\(String(describing: employeeCommissionDetails!.calEarnings().currencyFormat()))")
         }
         
-        else if employeeDetails?.empType=="FixedBasedPartTime"
+        else if employeeDetails?.empType=="FixedBased"
         {
+        
             //FixedBased Employee
             idView.text="\(String(describing: employeeFixedDetails!.empID))"
             firstNameView.text=employeeFixedDetails?.name
