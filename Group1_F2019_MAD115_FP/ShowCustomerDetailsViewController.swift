@@ -43,7 +43,7 @@ class ShowCustomerDetailsViewController: UIViewController,UITableViewDelegate,UI
                emailView.text=("\(String(describing: employeeFullTimeDetails!.bonus))")
             totalAmountView.text=("\(String(describing: employeeFullTimeDetails!.calEarnings().currencyFormat()))")
         }
-        else if employeeDetails?.empType=="PartTime"
+        else if employeeDetails?.empType=="CommissionBased"
         {
         //CommissionBased Employee
             idView.text="\(String(describing: employeeCommissionDetails!.empID))"
