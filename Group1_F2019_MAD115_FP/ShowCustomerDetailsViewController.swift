@@ -56,6 +56,11 @@ class ShowCustomerDetailsViewController: UIViewController,UITableViewDelegate,UI
         else if employeeDetails?.empType=="FixedBasedPartTime"
         {
             //FixedBased Employee
+            idView.text="\(String(describing: employeeFixedDetails!.empID))"
+            firstNameView.text=employeeFixedDetails?.name
+            lastNameView.text=employeeFixedDetails?.name
+            emailView.text=("\(String(describing: employeeFixedDetails!.fixedAmount))")
+            totalAmountView.text=("\(String(describing: employeeFixedDetails!.calEarnings().currencyFormat()))")
         }
         
         
