@@ -20,19 +20,17 @@ class AddEmployeeDetailViewController: UIViewController {
     @IBOutlet weak var fullTimeDataView: UIView!
     @IBOutlet weak var internDataView: UIView!
     @IBOutlet weak var empTypeSeg: UISegmentedControl!
-    
     @IBOutlet weak var txtDatePicker: UITextField!
     @IBOutlet weak var firstNameTxtField: UITextField!
-    
     @IBOutlet weak var emailTxtField: UITextField!
-    
     @IBOutlet weak var lastNameTxtField: UITextField!
-    
     @IBOutlet weak var txtSalary: UITextField!
-    
     @IBOutlet weak var txtBonus: UITextField!
-    
-     let datePicker = UIDatePicker()
+    @IBOutlet weak var txtHoursWorked: UITextField!
+    @IBOutlet weak var txtFixedAmount: UITextField!
+    @IBOutlet weak var txtCommissionPer: UITextField!
+    @IBOutlet weak var txtRate: UITextField!
+    let datePicker = UIDatePicker()
     
     let ins = Singleton.getInstance()
     
@@ -93,7 +91,10 @@ class AddEmployeeDetailViewController: UIViewController {
         let full_name=first_Name!+" "+last_Name!
         let salary=(txtSalary.text! as NSString).floatValue
         let bonus=(txtBonus.text! as NSString).floatValue
-        
+        let rate=(txtRate.text! as NSString).floatValue
+        let hrsWorked=(txtHoursWorked.text! as NSString).floatValue
+        let commissionPer=(txtCommissionPer.text! as NSString).floatValue
+        let fixedAmount=(txtFixedAmount.text! as NSString).floatValue
         
         if isValidEmail()
         {
@@ -106,7 +107,17 @@ class AddEmployeeDetailViewController: UIViewController {
             }
             
             else if empTypeSeg.selectedSegmentIndex == 1{
-                ins.addFullTimeEmployee(FTID: 2, FTtype: "FullTime", FTEName: full_name, FTDob: datePicker.date, FTSalary: salary, FTBonus: bonus)
+                ins.addFullTimeEmployee(FTID: 1, FTtype: "FullTime", FTEName: full_name, FTDob: datePicker.date, FTSalary: salary, FTBonus: bonus)
+            }
+            else if empTypeSeg.selectedSegmentIndex==2{
+                if partTimeTypeSeg.selectedSegmentIndex==0
+                {
+                    ins.addCommissionEmployee(ComTID: 1, ComTtype: "CommissionBased", ComTName: full_name, ComDob: datePicker.date, Rate: rate, HoursWorked: hrsWorked, CommissionPer: commissionPer)
+                }
+                else if partTimeTypeSeg.selectedSegmentIndex==1
+                {
+                
+                }
             }
             
             let alert = UIAlertController(title: "Customer Added", message: "Congrats!", preferredStyle: .alert)

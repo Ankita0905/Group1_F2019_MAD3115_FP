@@ -40,13 +40,17 @@ class ShowCustomerDetailsViewController: UIViewController,UITableViewDelegate,UI
                idView.text="\(String(describing: employeeFullTimeDetails!.empID))"
                firstNameView.text=employeeFullTimeDetails?.name
                lastNameView.text=employeeFullTimeDetails?.name
-               //print(employeeFullTimeDetails?.schoolName)
-                emailView.text=("\(String(describing: employeeFullTimeDetails!.bonus))")
+               emailView.text=("\(String(describing: employeeFullTimeDetails!.bonus))")
                 totalAmountView.text=("\(String(describing: employeeFullTimeDetails!.calEarnings()))")
         }
-        else if employeeDetails?.empType=="CommisssionBasedPartTime"
+        else if employeeDetails?.empType=="PartTime"
         {
         //CommissionBased Employee
+            idView.text="\(String(describing: employeeCommissionDetails!.empID))"
+            firstNameView.text=employeeCommissionDetails?.name
+            lastNameView.text=employeeCommissionDetails?.name
+            emailView.text=("\(String(describing: employeeCommissionDetails!.commissionPer))")
+             totalAmountView.text=("\(String(describing: employeeCommissionDetails!.calEarnings()))")
         }
         
         else if employeeDetails?.empType=="FixedBasedPartTime"

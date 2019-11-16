@@ -11,9 +11,9 @@ class FixedBasedPartTime:PartTime
 {
     var fixedAmount:Float
     
-    init(FixTEmpID: Int, FixTEmptype: String, FixTEmpName: String, FixTEmpAge: Date,  Rate: Float, HoursWorked: Float,FixedAmount:Float) {
+    init(FixTEmpID: Int, FixTEmptype: String, FixTEmpName: String, FixTDob: Date,  Rate: Float, HoursWorked: Float,FixedAmount:Float) {
         self.fixedAmount=FixedAmount
-        super.init(PTEmpID: FixTEmpID, PTEmptype: FixTEmptype, PTEmpName: FixTEmpName, PTEmpAge: FixTEmpAge, Rate: Rate, HoursWorked: HoursWorked)
+        super.init(PTEmpID: FixTEmpID, PTEmptype: FixTEmptype, PTEmpName: FixTEmpName, PTDob: FixTDob, Rate: Rate, HoursWorked: HoursWorked)
     }
     
     override func calEarnings()->Float {

@@ -448,7 +448,11 @@
                         <outlet property="partTimeTypeSeg" destination="oiu-P0-5LS" id="Jcl-EZ-44R"/>
                         <outlet property="partTimeTypeView" destination="h0O-lF-01H" id="8G5-gE-isd"/>
                         <outlet property="txtBonus" destination="OIO-dx-Pln" id="ITY-li-t1d"/>
+                        <outlet property="txtCommissionPer" destination="WxU-zz-sNL" id="oIE-ze-p1P"/>
                         <outlet property="txtDatePicker" destination="Ibx-r6-6D5" id="bjk-TT-UkF"/>
+                        <outlet property="txtFixedAmount" destination="5RD-Jm-wWf" id="bha-v6-OsP"/>
+                        <outlet property="txtHoursWorked" destination="EBF-zM-GLV" id="CYF-Gf-wve"/>
+                        <outlet property="txtRate" destination="K8e-ch-uCy" id="5iU-3J-mQ4"/>
                         <outlet property="txtSalary" destination="FDH-XZ-3uf" id="Vs2-Vt-o4E"/>
                         <outlet property="txtSchoolName" destination="Kyh-5T-U7m" id="jHh-t9-Wzf"/>
                     </connections>
