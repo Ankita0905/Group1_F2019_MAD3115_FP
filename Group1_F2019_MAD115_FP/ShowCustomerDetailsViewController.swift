@@ -27,12 +27,14 @@ class ShowCustomerDetailsViewController: UIViewController,UITableViewDelegate,UI
         //Intern employee
         if employeeDetails?.empType=="Intern"
         {
-        idView.text="\(String(describing: employeeInternDetails!.empID))"
-        firstNameView.text=employeeInternDetails?.name
-        lastNameView.text=employeeInternDetails?.name
-        //print(employeeInternDetails?.schoolName)
-        emailView.text=employeeInternDetails?.schoolName
-            totalAmountView.text="\(String(describing: employeeInternDetails!.calEarnings().currencyFormat()))"
+            idView.text="Employee ID :\(String(describing: employeeInternDetails!.empID))\nEmployee Name : \(String(describing: employeeInternDetails!.name))\nSchool Name : \(String(describing: employeeInternDetails!.schoolName))\nTotal Pay Amount : \(String(describing: employeeInternDetails!.calEarnings().currencyFormat()))"
+            
+//        idView.text="\(String(describing: employeeInternDetails!.empID))"
+//        firstNameView.text=employeeInternDetails?.name
+//        lastNameView.text=employeeInternDetails?.name
+//        //print(employeeInternDetails?.schoolName)
+//        emailView.text=employeeInternDetails?.schoolName
+//            totalAmountView.text="\(String(describing: employeeInternDetails!.calEarnings().currencyFormat()))"
         }
         else if employeeDetails?.empType=="FullTime"
         {
