@@ -43,7 +43,7 @@ class ShowEmployeeDetailsViewController: UIViewController,UITableViewDelegate,UI
         else if employeeDetails?.empType=="CommissionBasedPT"
         {
         //CommissionBased Employee
-            idView.text="Employee ID :\(String(describing: employeeCommissionDetails!.empID))\nEmployee Name : \(String(describing: employeeCommissionDetails!.name))\nEmployee Email:\(employeeCommissionDetails!.empEmail)\nEmployee DOB : \(String(describing: employeeCommissionDetails!.DOB.getForamttedDate()))\nEmployee Type : \(employeeCommissionDetails!.empType)\nHours Worked : \(String(describing: employeeCommissionDetails!.calHours()))  \nCommission % : \(String(describing: employeeCommissionDetails!.commissionPer))\nTotal Pay Amount : \(String(describing: employeeCommissionDetails!.calEarnings().currencyFormat()))"
+            idView.text="Employee ID :\(String(describing: employeeCommissionDetails!.empID))\nEmployee Name : \(String(describing: employeeCommissionDetails!.name))\nEmployee Email:\(employeeCommissionDetails!.empEmail)\nEmployee DOB : \(String(describing: employeeCommissionDetails!.DOB.getForamttedDate()))\nEmployee Type : \(employeeCommissionDetails!.empType)\nRate : \(String(describing: employeeCommissionDetails!.rate))\nHours Worked : \(String(describing: employeeCommissionDetails!.hoursworked))\nCommission % : \(String(describing: employeeCommissionDetails!.commissionPer))\nTotal Pay Amount : \(String(describing: employeeCommissionDetails!.calEarnings().currencyFormat()))"
 
             
 
@@ -54,7 +54,7 @@ class ShowEmployeeDetailsViewController: UIViewController,UITableViewDelegate,UI
         
             //FixedBased Employee
             
-            idView.text="Employee ID :\(String(describing: employeeFixedDetails!.empID))\nEmployee Name : \(String(describing: employeeFixedDetails!.name))\nEmployee Email:\(employeeFixedDetails!.empEmail)\nEmployee DOB : \(String(describing: employeeFixedDetails!.DOB.getForamttedDate()))\nEmployee Type : \(employeeFixedDetails!.empType)\nFixed Amount : \(String(describing: employeeFixedDetails!.fixedAmount))\nTotal Pay Amount : \(String(describing: employeeFixedDetails!.calEarnings().currencyFormat()))"
+            idView.text="Employee ID :\(String(describing: employeeFixedDetails!.empID))\nEmployee Name : \(String(describing: employeeFixedDetails!.name))\nEmployee Email:\(employeeFixedDetails!.empEmail)\nEmployee DOB : \(String(describing: employeeFixedDetails!.DOB.getForamttedDate()))\nEmployee Type : \(employeeFixedDetails!.empType)\nRate : \(String(describing: employeeFixedDetails!.rate))\nHours worked : \(String(describing: employeeFixedDetails!.hoursworked))\nFixed Amount : \(String(describing: employeeFixedDetails!.fixedAmount))\nTotal Pay Amount : \(String(describing: employeeFixedDetails!.calEarnings().currencyFormat()))"
                     }
         
         updateEmp()
@@ -80,9 +80,18 @@ class ShowEmployeeDetailsViewController: UIViewController,UITableViewDelegate,UI
         
         
         updateDetailVC.UemployeeDetails=i.returnEmployeeObj(empID: employeeDetails!.empID)
+        if employeeDetails?.empType=="Intern"{
         updateDetailVC.UemployeeInternDetails=i.returnEmployeeObj(empID: employeeInternDetails!.empID) as! Intern
-        
+        }
+        else if employeeDetails?.empType=="FullTime"{
+            updateDetailVC.UemployeeFullTimeDetails=i.returnEmployeeObj(empID: employeeFullTimeDetails!.empID) as! FullTime}
+        else if employeeDetails?.empType=="CommissionBasedPT"{
+            updateDetailVC.UemployeeCommissionDetails=i.returnEmployeeObj(empID: employeeCommissionDetails!.empID) as! CommissionBasedPartTime}
+        else if employeeDetails?.empType=="FixedBasedPT"{
+        updateDetailVC.UemployeeFixedDetails=i.returnEmployeeObj(empID: employeeFixedDetails!.empID) as! FixedBasedPartTime
+        }
         self.navigationController?.pushViewController(updateDetailVC, animated: true)
+        
 
     }
     

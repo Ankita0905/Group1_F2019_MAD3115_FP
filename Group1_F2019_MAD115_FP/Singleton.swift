@@ -57,7 +57,27 @@ class Singleton : NSObject
          self.addIemployee(Iemployee: temp)
 
     }
-
+    func updateFullTimeEmployee(FTID: Int,FTtype: String,FTEName:String,FTDob:Date,FTSalary:Float,FTBonus:Float,EEmail:String)
+    {
+        
+        let temp2=FullTime(FTEmpID: FTID, FTEmptype: FTtype, FTEmpName: FTEName, FTDob: FTDob, FTEmail:EEmail, Salary: FTSalary, Bonus: FTBonus)
+        self.addFTemployee(FTEmployee: temp2)
+    }
+    
+    func updateCommissionEmployee(ComTID: Int, ComTtype: String, ComTName: String, ComDob: Date, Rate: Float, HoursWorked: Float,CommissionPer:Float,EEmail:String)
+    {
+        
+        let temp3=CommissionBasedPartTime(ComTEmpID: ComTID, ComTEmptype: ComTtype, ComTEmpName: ComTName, ComTEmail: EEmail,ComTDob: ComDob, Rate: Rate, HoursWorked: HoursWorked, CommissionPer: CommissionPer)
+        self.addCompEmployee(CompEmployee: temp3)
+    }
+   
+    func updateFixedEmployee(FixID: Int, Fixtype: String, FixName: String, FixDob: Date, Rate: Float, HoursWorked: Float,FixedAmount:Float,EEmail:String)
+    {
+        
+        let temp4=FixedBasedPartTime(FixTEmpID: FixID, FixTEmptype: Fixtype, FixTEmpName: FixName, FixTDob: FixDob, FixTEmail: EEmail, Rate: Rate, HoursWorked: HoursWorked, FixedAmount: FixedAmount)
+        self.addFixEmployee(FixEmployee: temp4)
+    }
+    
     func addIemployee(Iemployee: Intern)
     {
         dict.employeeDictionary.updateValue(Iemployee, forKey: Iemployee.empID)
@@ -81,6 +101,8 @@ class Singleton : NSObject
         let temp3=CommissionBasedPartTime(ComTEmpID: emp2, ComTEmptype: ComTtype, ComTEmpName: ComTName, ComTEmail: EEmail,ComTDob: ComDob, Rate: Rate, HoursWorked: HoursWorked, CommissionPer: CommissionPer)
         self.addCompEmployee(CompEmployee: temp3)
     }
+    
+    
     
     func addCompEmployee(CompEmployee:CommissionBasedPartTime)
     {

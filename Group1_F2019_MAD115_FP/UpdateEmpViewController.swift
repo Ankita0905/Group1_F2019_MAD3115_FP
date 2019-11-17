@@ -43,10 +43,9 @@ let sinIns = Singleton.getInstance()
         saveCustomerButton()
         
         
-        updateFields()
         
         
-        
+
         
                self.showDatePicker()
              
@@ -56,6 +55,7 @@ let sinIns = Singleton.getInstance()
                updatePartTimeView.isHidden=true
                updateCommissionView.isHidden=false
                updateFixedView.isHidden=true
+        updateFields()
        
     }
     
@@ -72,6 +72,56 @@ let sinIns = Singleton.getInstance()
        
             txtUpdateDOB.text="\(String(describing: UemployeeDetails!.DOB.getForamttedDate()))"
         txtUpdateSchoolName.text=UemployeeInternDetails?.schoolName
+            segUpdateEmpType.selectedSegmentIndex=0
+            selectseg(Seg: 0)
+            
+            
+        }
+        else if UemployeeDetails?.empType=="FullTime"
+        {
+            txtUpdateEmail.text=UemployeeDetails?.empEmail
+             txtUpdateFName.text=UemployeeDetails?.name
+            
+                 txtUpdateDOB.text="\(String(describing: UemployeeDetails!.DOB.getForamttedDate()))"
+            txtUpdateSalary.text="\(String(describing: UemployeeFullTimeDetails!.salary))"
+            txtUpdateBonus.text="\(String(describing: UemployeeFullTimeDetails!.bonus))"
+            segUpdateEmpType.selectedSegmentIndex=1
+            selectseg(Seg: 1)
+            
+            
+            
+        }
+        
+        else if UemployeeDetails?.empType=="CommissionBasedPT"
+        {
+            txtUpdateEmail.text=UemployeeDetails?.empEmail
+             txtUpdateFName.text=UemployeeDetails?.name
+            
+                 txtUpdateDOB.text="\(String(describing: UemployeeDetails!.DOB.getForamttedDate()))"
+            txtUpdateCommission.text="\(String(describing: UemployeeCommissionDetails!.commissionPer))"
+             txtUpdateRate.text="\(String(describing: UemployeeCommissionDetails!.rate))"
+             txtUpdateHrsWorked.text="\(String(describing: UemployeeCommissionDetails!.hoursworked))"
+            segUpdateEmpType.selectedSegmentIndex=2
+            selectseg(Seg: 2)
+            segUpdatePartTimeType.selectedSegmentIndex=0
+            selectPartTimeSeg(PTSeg: 0)
+            
+           
+        }
+        else if UemployeeDetails?.empType=="FixedBasedPT"
+        {
+            txtUpdateEmail.text=UemployeeDetails?.empEmail
+             txtUpdateFName.text=UemployeeDetails?.name
+            
+                 txtUpdateDOB.text="\(String(describing: UemployeeDetails!.DOB.getForamttedDate()))"
+            txtUpdateAmount.text="\(String(describing: UemployeeFixedDetails!.fixedAmount))"
+             txtUpdateRate.text="\(String(describing: UemployeeFixedDetails!.rate))"
+             txtUpdateHrsWorked.text="\(String(describing: UemployeeFixedDetails!.hoursworked))"
+            segUpdateEmpType.selectedSegmentIndex=2
+            selectseg(Seg: 2)
+            
+           segUpdatePartTimeType.selectedSegmentIndex=1
+           selectPartTimeSeg(PTSeg: 1)
         }
     }
     
@@ -168,16 +218,16 @@ let sinIns = Singleton.getInstance()
                 }
                 
                 else if segUpdateEmpType.selectedSegmentIndex == 1{
-                    sinIns.addFullTimeEmployee(FTID: 1, FTtype: "FullTime", FTEName: full_name, FTDob: datePicker.date, FTSalary: salary, FTBonus: bonus, EEmail: txtUpdateEmail.text!)
+                    sinIns.updateFullTimeEmployee(FTID: UemployeeDetails!.empID, FTtype: "FullTime", FTEName: full_name, FTDob: datePicker.date, FTSalary: salary, FTBonus: bonus, EEmail: txtUpdateEmail.text!)
                 }
                 else if segUpdateEmpType.selectedSegmentIndex==2{
                     if segUpdatePartTimeType.selectedSegmentIndex==0
                     {
-                        sinIns.addCommissionEmployee(ComTID: 1, ComTtype: "CommissionBasedPT", ComTName: full_name, ComDob: datePicker.date, Rate: rate, HoursWorked: hrsWorked, CommissionPer: commissionPer, EEmail: txtUpdateEmail.text!)
+                        sinIns.updateCommissionEmployee(ComTID: UemployeeDetails!.empID, ComTtype: "CommissionBasedPT", ComTName: full_name, ComDob: datePicker.date, Rate: rate, HoursWorked: hrsWorked, CommissionPer: commissionPer, EEmail: txtUpdateEmail.text!)
                     }
                     else if segUpdatePartTimeType.selectedSegmentIndex==1
                     {
-                        sinIns.addFixedEmployee(FixID: 1, Fixtype: "FixedBasedPT", FixName: full_name, FixDob: datePicker.date, Rate: rate, HoursWorked: hrsWorked, FixedAmount: fixedAmount, EEmail: txtUpdateEmail.text!)
+                        sinIns.updateFixedEmployee(FixID: UemployeeDetails!.empID, Fixtype: "FixedBasedPT", FixName: full_name, FixDob: datePicker.date, Rate: rate, HoursWorked: hrsWorked, FixedAmount: fixedAmount, EEmail: txtUpdateEmail.text!)
                     }
                 }
                 
@@ -190,6 +240,7 @@ let sinIns = Singleton.getInstance()
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(alert:UIAlertAction!) in
                     
                   self.navigationController?.popViewController(animated: true)
+                    self.navigationController?.popViewController(animated: true)
                    // self.navigationController!.pushViewController(updateDetailVC, animated: true)
                     
                 }))
@@ -203,26 +254,65 @@ let sinIns = Singleton.getInstance()
             }
         }
     
+    func selectseg(Seg :Int)  {
+               switch Seg{
+                 case 0:
+                     updateInterView.isHidden = false
+                     updateFullTimeView.isHidden=true
+                     updatePartTimeView.isHidden=true
+                 case 1:
+                     updateFullTimeView.isHidden = false
+                     updateInterView.isHidden=true
+                     updatePartTimeView.isHidden=true
+                 case 2:
+                     updatePartTimeView.isHidden=false
+                     updateFullTimeView.isHidden=true
+                     updateInterView.isHidden = true
+                     
+               
+                 default:
+                     print("")
+                   
+                 }
+    }
+    
+    func selectPartTimeSeg(PTSeg: Int){
+        
+    
+    switch  PTSeg{
+        case 0:
+            updateCommissionView.isHidden=false
+            updateFixedView.isHidden=true
+        case 1:
+            updateFixedView.isHidden=false
+            updateCommissionView.isHidden=true
+       
+        default:
+            print("")
+    
+        }
+    }
+    
     @IBAction func updateTypeSeg(_ sender: UISegmentedControl)
     {
         switch sender.selectedSegmentIndex {
-          case 0:
-              updateInterView.isHidden = false
-              updateFullTimeView.isHidden=true
-              updatePartTimeView.isHidden=true
-          case 1:
-              updateFullTimeView.isHidden = false
-              updateInterView.isHidden=true
-              updatePartTimeView.isHidden=true
-          case 2:
-              updatePartTimeView.isHidden=false
-              updateFullTimeView.isHidden=true
-              updateInterView.isHidden = true
-              
-        
-          default:
-              print("")
-          }
+                       case 0:
+                           updateInterView.isHidden = false
+                           updateFullTimeView.isHidden=true
+                           updatePartTimeView.isHidden=true
+                       case 1:
+                           updateFullTimeView.isHidden = false
+                           updateInterView.isHidden=true
+                           updatePartTimeView.isHidden=true
+                       case 2:
+                           updatePartTimeView.isHidden=false
+                           updateFullTimeView.isHidden=true
+                           updateInterView.isHidden = true
+                           
+                     
+                       default:
+                           print("")
+                         }
     }
     
     @IBAction func updatePartTimeSeg(_ sender: UISegmentedControl)
