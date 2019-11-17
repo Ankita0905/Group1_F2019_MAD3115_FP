@@ -29,21 +29,21 @@ class ShowEmployeeDetailsViewController: UIViewController,UITableViewDelegate,UI
         //Intern employee
         if employeeDetails?.empType=="Intern"
         {
-            idView.text="Employee ID :\(String(describing: employeeInternDetails!.empID))\nEmployee Name : \(String(describing: employeeInternDetails!.name))\nEmployee DOB : \(String(describing: employeeInternDetails!.DOB.getForamttedDate()))\nEmployee Type : \(employeeInternDetails!.empType)  \nSchool Name : \(String(describing: employeeInternDetails!.schoolName))\nTotal Pay Amount : \(String(describing: employeeInternDetails!.calEarnings().currencyFormat()))"
+            idView.text="Employee ID :\(String(describing: employeeInternDetails!.empID))\nEmployee Name : \(String(describing: employeeInternDetails!.name))\nEmployee Email:\(employeeInternDetails!.empEmail)\nEmployee DOB : \(String(describing: employeeInternDetails!.DOB.getForamttedDate()))\nEmployee Type : \(employeeInternDetails!.empType)  \nSchool Name : \(String(describing: employeeInternDetails!.schoolName))\nTotal Pay Amount : \(String(describing: employeeInternDetails!.calEarnings().currencyFormat()))"
             
 
         }
         else if employeeDetails?.empType=="FullTime"
         {
         //Full Time Employee
-            idView.text="Employee ID :\(String(describing: employeeFullTimeDetails!.empID))\nEmployee Name : \(String(describing: employeeFullTimeDetails!.name))\nEmployee DOB : \(String(describing: employeeFullTimeDetails!.DOB.getForamttedDate()))\nEmployee Type : \(employeeFullTimeDetails!.empType)\nSalary : \(String(describing: employeeFullTimeDetails!.salary))  \nBonus : \(String(describing: employeeFullTimeDetails!.bonus))\nTotal Pay Amount : \(String(describing: employeeFullTimeDetails!.calEarnings().currencyFormat()))"
+            idView.text="Employee ID :\(String(describing: employeeFullTimeDetails!.empID))\nEmployee Name : \(String(describing: employeeFullTimeDetails!.name))\nEmployee Email:\(employeeFullTimeDetails!.empEmail)\nEmployee DOB : \(String(describing: employeeFullTimeDetails!.DOB.getForamttedDate()))\nEmployee Type : \(employeeFullTimeDetails!.empType)\nSalary : \(String(describing: employeeFullTimeDetails!.salary))  \nBonus : \(String(describing: employeeFullTimeDetails!.bonus))\nTotal Pay Amount : \(String(describing: employeeFullTimeDetails!.calEarnings().currencyFormat()))"
             
 
         }
         else if employeeDetails?.empType=="CommissionBasedPT"
         {
         //CommissionBased Employee
-            idView.text="Employee ID :\(String(describing: employeeCommissionDetails!.empID))\nEmployee Name : \(String(describing: employeeCommissionDetails!.name))\nEmployee DOB : \(String(describing: employeeCommissionDetails!.DOB.getForamttedDate()))\nEmployee Type : \(employeeCommissionDetails!.empType)\nHours Worked : \(String(describing: employeeCommissionDetails!.calHours()))  \nCommission % : \(String(describing: employeeCommissionDetails!.commissionPer))\nTotal Pay Amount : \(String(describing: employeeCommissionDetails!.calEarnings().currencyFormat()))"
+            idView.text="Employee ID :\(String(describing: employeeCommissionDetails!.empID))\nEmployee Name : \(String(describing: employeeCommissionDetails!.name))\nEmployee Email:\(employeeCommissionDetails!.empEmail)\nEmployee DOB : \(String(describing: employeeCommissionDetails!.DOB.getForamttedDate()))\nEmployee Type : \(employeeCommissionDetails!.empType)\nHours Worked : \(String(describing: employeeCommissionDetails!.calHours()))  \nCommission % : \(String(describing: employeeCommissionDetails!.commissionPer))\nTotal Pay Amount : \(String(describing: employeeCommissionDetails!.calEarnings().currencyFormat()))"
 
             
 
@@ -54,7 +54,7 @@ class ShowEmployeeDetailsViewController: UIViewController,UITableViewDelegate,UI
         
             //FixedBased Employee
             
-            idView.text="Employee ID :\(String(describing: employeeFixedDetails!.empID))\nEmployee Name : \(String(describing: employeeFixedDetails!.name))\nEmployee DOB : \(String(describing: employeeFixedDetails!.DOB.getForamttedDate()))\nEmployee Type : \(employeeFixedDetails!.empType)\nFixed Amount : \(String(describing: employeeFixedDetails!.fixedAmount))\nTotal Pay Amount : \(String(describing: employeeFixedDetails!.calEarnings().currencyFormat()))"
+            idView.text="Employee ID :\(String(describing: employeeFixedDetails!.empID))\nEmployee Name : \(String(describing: employeeFixedDetails!.name))\nEmployee Email:\(employeeFixedDetails!.empEmail)\nEmployee DOB : \(String(describing: employeeFixedDetails!.DOB.getForamttedDate()))\nEmployee Type : \(employeeFixedDetails!.empType)\nFixed Amount : \(String(describing: employeeFixedDetails!.fixedAmount))\nTotal Pay Amount : \(String(describing: employeeFixedDetails!.calEarnings().currencyFormat()))"
                     }
         
         updateEmp()

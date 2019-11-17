@@ -90,8 +90,8 @@ class AddEmployeeDetailViewController: UIViewController {
         
         
         let first_Name = firstNameTxtField.text
-        let last_Name = lastNameTxtField.text
-        let full_name=first_Name!+" "+last_Name!
+        //let last_Name = lastNameTxtField.text
+        //let full_name=first_Name!+" "+last_Name!
         let salary=(txtSalary.text! as NSString).floatValue
         let bonus=(txtBonus.text! as NSString).floatValue
         let rate=(txtRate.text! as NSString).floatValue
@@ -104,22 +104,22 @@ class AddEmployeeDetailViewController: UIViewController {
             
             let email = emailTxtField.text
             if empTypeSeg.selectedSegmentIndex == 0{
-            ins.addInternEmployee(EID: 1, EName: full_name, EDOB:datePicker.date, EType: "Intern", Ischool: txtSchoolName.text!)
+                ins.addInternEmployee(EID: 1, EName: first_Name!, EDOB:datePicker.date, EType: "Intern", Ischool: txtSchoolName.text!, EEmail: emailTxtField.text!)
 //                print(txtSchoolName.text!)
 //                print(full_name)
             }
             
             else if empTypeSeg.selectedSegmentIndex == 1{
-                ins.addFullTimeEmployee(FTID: 1, FTtype: "FullTime", FTEName: full_name, FTDob: datePicker.date, FTSalary: salary, FTBonus: bonus)
+                ins.addFullTimeEmployee(FTID: 1, FTtype: "FullTime", FTEName: first_Name!, FTDob: datePicker.date, FTSalary: salary, FTBonus: bonus, EEmail: emailTxtField.text!)
             }
             else if empTypeSeg.selectedSegmentIndex==2{
                 if partTimeTypeSeg.selectedSegmentIndex==0
                 {
-                    ins.addCommissionEmployee(ComTID: 1, ComTtype: "CommissionBasedPT", ComTName: full_name, ComDob: datePicker.date, Rate: rate, HoursWorked: hrsWorked, CommissionPer: commissionPer)
+                    ins.addCommissionEmployee(ComTID: 1, ComTtype: "CommissionBasedPT", ComTName: first_Name!, ComDob: datePicker.date, Rate: rate, HoursWorked: hrsWorked, CommissionPer: commissionPer, EEmail: emailTxtField.text!)
                 }
                 else if partTimeTypeSeg.selectedSegmentIndex==1
                 {
-                    ins.addFixedEmployee(FixID: 1, Fixtype: "FixedBasedPT", FixName: full_name, FixDob: datePicker.date, Rate: rate, HoursWorked: hrsWorked, FixedAmount: fixedAmount)
+                    ins.addFixedEmployee(FixID: 1, Fixtype: "FixedBasedPT", FixName: first_Name!, FixDob: datePicker.date, Rate: rate, HoursWorked: hrsWorked, FixedAmount: fixedAmount, EEmail: emailTxtField.text!)
                 }
             }
             

@@ -10,10 +10,10 @@ import Foundation
 class CommissionBasedPartTime:PartTime
 {
     var commissionPer:Float
-    init(ComTEmpID: Int, ComTEmptype: String, ComTEmpName: String, ComTDob: Date, Rate: Float, HoursWorked: Float,CommissionPer:Float)
+    init(ComTEmpID: Int, ComTEmptype: String, ComTEmpName: String,ComTEmail:String, ComTDob: Date, Rate: Float, HoursWorked: Float,CommissionPer:Float)
     {
         self.commissionPer=CommissionPer
-        super.init(PTEmpID: ComTEmpID, PTEmptype: ComTEmptype, PTEmpName: ComTEmpName, PTDob: ComTDob, Rate: Rate, HoursWorked: HoursWorked)
+        super.init(PTEmpID: ComTEmpID, PTEmptype: ComTEmptype, PTEmpName: ComTEmpName, PTEmail: ComTEmail, PTDob: ComTDob, Rate: Rate, HoursWorked: HoursWorked)
     }
     func calHours()->Float
     {
