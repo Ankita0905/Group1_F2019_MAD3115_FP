@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CustomerListViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource{
+class EmployeeListViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource{
     
     
     
@@ -36,7 +36,7 @@ class CustomerListViewController: UIViewController ,UITableViewDelegate,UITableV
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let rowselect=UIStoryboard(name: "Main", bundle: nil)
-        let detailsVC=rowselect.instantiateViewController(withIdentifier: "detialsOfCustomerVC") as! ShowCustomerDetailsViewController
+        let detailsVC=rowselect.instantiateViewController(withIdentifier: "detialsOfCustomerVC") as! ShowEmployeeDetailsViewController
         detailsVC.employeeDetails=temp.returnEmployeeObj(empID: indexPath.row+1)!
         detailsVC.employeeInternDetails=temp.returnEmployeeObj(empID: indexPath.row+1) as? Intern
         detailsVC.employeeFullTimeDetails=temp.returnEmployeeObj(empID: indexPath.row+1) as? FullTime

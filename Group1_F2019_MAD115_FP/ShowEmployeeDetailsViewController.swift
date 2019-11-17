@@ -1,5 +1,5 @@
 //
-//  ShowCustomerDetailsViewController.swift
+//  ShowEmployeeDetailsViewController.swift
 //  C0769647_MidTerm_MAD3115F2019
 //
 //  Created by MacStudent on 2019-11-01.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ShowCustomerDetailsViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class ShowEmployeeDetailsViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     var employeeDetails:Employee?=nil
     var employeeInternDetails:Intern?=nil
@@ -91,7 +91,7 @@ class ShowCustomerDetailsViewController: UIViewController,UITableViewDelegate,UI
      
      private func addBillButton()
      {
-         let btnAddBill=UIBarButtonItem(title: "Add Bill", style: .done, target: self, action: #selector(ShowCustomerDetailsViewController.addBill(sender:)))
+         let btnAddBill=UIBarButtonItem(title: "Add Bill", style: .done, target: self, action: #selector(ShowEmployeeDetailsViewController.addBill(sender:)))
              navigationItem.rightBarButtonItem=btnAddBill
      }
      

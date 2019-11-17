@@ -84,7 +84,7 @@ class AddEmployeeDetailViewController: UIViewController {
     {
         
         let savebutton=UIStoryboard(name: "Main", bundle: nil)
-        let customerListVC=savebutton.instantiateViewController(withIdentifier: "CustomerListVC") as! CustomerListViewController
+        let customerListVC=savebutton.instantiateViewController(withIdentifier: "CustomerListVC") as! EmployeeListViewController
         
         
         

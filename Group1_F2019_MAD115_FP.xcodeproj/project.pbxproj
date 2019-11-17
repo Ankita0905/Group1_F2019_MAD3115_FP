@@ -21,8 +21,8 @@
 		E0F11073237E3D8B00B822BB /* AddEmployeeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F11068237E3D8A00B822BB /* AddEmployeeDetailViewController.swift */; };
 		E0F11074237E3D8B00B822BB /* AddNewBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F11069237E3D8A00B822BB /* AddNewBillViewController.swift */; };
 		E0F11075237E3D8B00B822BB /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F1106A237E3D8A00B822BB /* Singleton.swift */; };
-		E0F11077237E3D8B00B822BB /* CustomerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F1106C237E3D8A00B822BB /* CustomerListViewController.swift */; };
-		E0F11079237E3D8B00B822BB /* ShowCustomerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F1106E237E3D8B00B822BB /* ShowCustomerDetailsViewController.swift */; };
+		E0F11077237E3D8B00B822BB /* EmployeeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F1106C237E3D8A00B822BB /* EmployeeListViewController.swift */; };
+		E0F11079237E3D8B00B822BB /* ShowEmployeeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F1106E237E3D8B00B822BB /* ShowEmployeeDetailsViewController.swift */; };
 		E0F11087237F308B00B822BB /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F11086237F308B00B822BB /* MenuViewController.swift */; };
 		E0F1109C237F60A400B822BB /* FixedBasedPartTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F11096237F60A400B822BB /* FixedBasedPartTime.swift */; };
 		E0F1109D237F60A400B822BB /* CommissionBasedPartTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F11097237F60A400B822BB /* CommissionBasedPartTime.swift */; };
@@ -54,8 +54,8 @@
 		E0F11068237E3D8A00B822BB /* AddEmployeeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEmployeeDetailViewController.swift; sourceTree = "<group>"; };
 		E0F11069237E3D8A00B822BB /* AddNewBillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewBillViewController.swift; sourceTree = "<group>"; };
 		E0F1106A237E3D8A00B822BB /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
-		E0F1106C237E3D8A00B822BB /* CustomerListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerListViewController.swift; sourceTree = "<group>"; };
-		E0F1106E237E3D8B00B822BB /* ShowCustomerDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowCustomerDetailsViewController.swift; sourceTree = "<group>"; };
+		E0F1106C237E3D8A00B822BB /* EmployeeListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeListViewController.swift; sourceTree = "<group>"; };
+		E0F1106E237E3D8B00B822BB /* ShowEmployeeDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowEmployeeDetailsViewController.swift; sourceTree = "<group>"; };
 		E0F11086237F308B00B822BB /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		E0F11096237F60A400B822BB /* FixedBasedPartTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FixedBasedPartTime.swift; sourceTree = "<group>"; };
 		E0F11097237F60A400B822BB /* CommissionBasedPartTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommissionBasedPartTime.swift; sourceTree = "<group>"; };
@@ -111,8 +111,8 @@
 				E0F11086237F308B00B822BB /* MenuViewController.swift */,
 				E0F11068237E3D8A00B822BB /* AddEmployeeDetailViewController.swift */,
 				E0F11069237E3D8A00B822BB /* AddNewBillViewController.swift */,
-				E0F1106C237E3D8A00B822BB /* CustomerListViewController.swift */,
-				E0F1106E237E3D8B00B822BB /* ShowCustomerDetailsViewController.swift */,
+				E0F1106C237E3D8A00B822BB /* EmployeeListViewController.swift */,
+				E0F1106E237E3D8B00B822BB /* ShowEmployeeDetailsViewController.swift */,
 				E0F1106A237E3D8A00B822BB /* Singleton.swift */,
 				E0F11067237E3D8A00B822BB /* Users.plist */,
 				E07F1BAD237DFECC00F07330 /* Assets.xcassets */,
@@ -232,7 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0F110A6237F60C100B822BB /* Vehicle.swift in Sources */,
-				E0F11077237E3D8B00B822BB /* CustomerListViewController.swift in Sources */,
+				E0F11077237E3D8B00B822BB /* EmployeeListViewController.swift in Sources */,
 				E08B72A22380CA6800C78634 /* ContactUsViewController.swift in Sources */,
 				E0F11066237E3D5400B822BB /* LoginViewController.swift in Sources */,
 				E0F110A0237F60A400B822BB /* Intern.swift in Sources */,
@@ -251,7 +251,7 @@
 				E0F1109E237F60A400B822BB /* FullTime.swift in Sources */,
 				E0F110B4237F60FA00B822BB /* IPrintable.swift in Sources */,
 				E0F11074237E3D8B00B822BB /* AddNewBillViewController.swift in Sources */,
-				E0F11079237E3D8B00B822BB /* ShowCustomerDetailsViewController.swift in Sources */,
+				E0F11079237E3D8B00B822BB /* ShowEmployeeDetailsViewController.swift in Sources */,
 				E08B72A42380CA9400C78634 /* AboutUsViewController.swift in Sources */,
 				E07F1BA7237DFEC900F07330 /* SceneDelegate.swift in Sources */,
 			);
