@@ -64,14 +64,49 @@
                                     <segue destination="JIZ-cp-Ybs" kind="show" id="Xic-ik-E5F"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add new Employee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nfs-zb-cwh">
+                                <rect key="frame" x="35" y="424" width="146" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="View employees" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xwU-yx-xh1">
+                                <rect key="frame" x="245" y="424" width="124" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contact Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5c-1d-lQ7">
+                                <rect key="frame" x="64" y="639" width="86" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IxB-ee-0lx">
+                                <rect key="frame" x="274" y="639" width="72" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Log Out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJI-vu-I56">
+                                <rect key="frame" x="177" y="806" width="61" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="F61-Rx-lci"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YQA-yU-aFG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="428" y="-650"/>
+            <point key="canvasLocation" x="191" y="-650"/>
         </scene>
         <!--Login-->
         <scene sceneID="doZ-rz-1OC">
@@ -205,7 +240,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dVC-6e-iks" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1971" y="-1338"/>
+            <point key="canvasLocation" x="1428" y="-1313"/>
         </scene>
         <!--Add Employee Detail View Controller-->
         <scene sceneID="3m6-fU-Y8O">
@@ -465,7 +500,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J9a-EY-Hi1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1971.0144927536232" y="-650.22321428571422"/>
+            <point key="canvasLocation" x="1428" y="-652"/>
         </scene>
         <!--About Us View Controller-->
         <scene sceneID="Xha-kX-TFS">
@@ -502,7 +537,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SMi-48-Ukc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="427.536231884058" y="67.633928571428569"/>
+            <point key="canvasLocation" x="190" y="68"/>
         </scene>
         <!--Contact Us View Controller-->
         <scene sceneID="5GJ-5C-G7R">
@@ -513,10 +548,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xb0-vT-2qa">
-                                <rect key="frame" x="130" y="406" width="165" height="30"/>
+                                <rect key="frame" x="130" y="402" width="165" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.2196095586" green="0.2196047008" blue="0.21960800890000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Contact Us"/>
+                                <state key="normal" title="Click Here">
+                                    <color key="titleColor" red="0.38172715899999998" green="0.64319860939999995" blue="0.85492843389999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                                 <connections>
                                     <action selector="btnContactUs:" destination="JFn-PX-fJM" eventType="touchUpInside" id="ysL-Ot-4Ap"/>
                                 </connections>
@@ -528,6 +566,10 @@
                                     <navigationItem title="Contact Us" id="ARp-tj-XYK"/>
                                 </items>
                             </navigationBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="contact" translatesAutoresizingMaskIntoConstraints="NO" id="xee-jk-who">
+                                <rect key="frame" x="0.0" y="70" width="414" height="281"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="TmV-mJ-24d"/>
@@ -536,7 +578,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G70-5K-Wgh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1989.8550724637682" y="67.633928571428569"/>
+            <point key="canvasLocation" x="1428" y="68"/>
         </scene>
         <!--Show Customer Details View Controller-->
         <scene sceneID="MWH-Pm-g5m">
@@ -586,7 +628,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pih-Lq-vh8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3071" y="-650"/>
+            <point key="canvasLocation" x="2465" y="-650"/>
         </scene>
         <!--Add New Bill View Controller-->
         <scene sceneID="nbd-o6-zSH">
@@ -653,12 +695,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VR5-id-grG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4023" y="-650"/>
+            <point key="canvasLocation" x="3468" y="-650"/>
         </scene>
     </scenes>
     <resources>
         <image name="Mainlogo" width="225" height="225"/>
         <image name="border" width="400" height="400"/>
+        <image name="contact" width="612" height="408"/>
         <image name="employee" width="512" height="512"/>
         <image name="follower" width="512" height="512"/>
         <image name="phone-call" width="512" height="512"/>
