@@ -91,9 +91,16 @@ class Singleton : NSObject
         dict.employeeDictionary.updateValue(FixEmployee, forKey: FixEmployee.empID)
     }
         
+    let date=Date()
+    
+    func AddEmployee(employee: Employee)
+    {
+        dict.employeeDictionary.updateValue(employee, forKey: employee.empID)
+    }
     func createEmp()
     {
-        
+        let i1=Intern(IempID: 1, IName: "Ankita Jain", ISchoolName: "Lambton", IEmpType: "Intern", IDOB: date)
+        AddEmployee(employee: i1)
     }
     
     
