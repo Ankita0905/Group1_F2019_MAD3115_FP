@@ -78,7 +78,7 @@ class EmployeeListViewController: UIViewController ,UITableViewDelegate,UITableV
         customerList.dataSource=self
         
       
-        
+        temp.createEmp()
         
         
     }
