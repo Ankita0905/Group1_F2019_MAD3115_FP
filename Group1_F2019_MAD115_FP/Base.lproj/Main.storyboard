@@ -470,6 +470,26 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="YNr-dj-EE6"/>
                     </view>
+                    <connections>
+                        <outlet property="segUpdateEmpType" destination="UBm-AI-DgX" id="6KZ-1O-euG"/>
+                        <outlet property="segUpdatePartTimeType" destination="s7g-R2-YQ9" id="QfG-dU-f97"/>
+                        <outlet property="txtUpdateAmount" destination="8ji-TJ-n6q" id="Mol-El-orj"/>
+                        <outlet property="txtUpdateBonus" destination="154-LD-Flc" id="0aW-zy-Fge"/>
+                        <outlet property="txtUpdateCommission" destination="i2b-ND-Awb" id="uhS-Ht-gEi"/>
+                        <outlet property="txtUpdateDOB" destination="Jos-q4-xuy" id="4ab-GS-PSl"/>
+                        <outlet property="txtUpdateEmail" destination="hDk-Xr-UEC" id="al9-Iz-Ht2"/>
+                        <outlet property="txtUpdateFName" destination="xXy-sm-Tq9" id="Gld-WR-Ar1"/>
+                        <outlet property="txtUpdateHrsWorked" destination="wpU-8a-EUn" id="1Ja-1Z-IOR"/>
+                        <outlet property="txtUpdateLName" destination="sov-ie-Ekg" id="ZBW-U9-sXR"/>
+                        <outlet property="txtUpdateRate" destination="qbd-Dm-LHr" id="ysL-W2-Su5"/>
+                        <outlet property="txtUpdateSalary" destination="PZ2-u9-tpR" id="CMd-wd-dtc"/>
+                        <outlet property="txtUpdateSchoolName" destination="zvy-ZU-tOF" id="O7k-vL-XCW"/>
+                        <outlet property="updateCommissionView" destination="O6P-NK-1NI" id="zsb-iM-b1h"/>
+                        <outlet property="updateFixedView" destination="KJo-56-utb" id="WCT-ku-x5R"/>
+                        <outlet property="updateFullTimeView" destination="PRU-wU-QHZ" id="qAc-WU-6Qo"/>
+                        <outlet property="updateInterView" destination="Oi5-NV-e7t" id="htl-Tn-mmM"/>
+                        <outlet property="updatePartTimeView" destination="hqt-3z-2QC" id="mNJ-fd-w5R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3eP-7B-x82" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
