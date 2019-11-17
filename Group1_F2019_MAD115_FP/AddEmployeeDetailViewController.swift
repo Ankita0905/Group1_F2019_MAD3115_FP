@@ -49,12 +49,15 @@ class AddEmployeeDetailViewController: UIViewController {
        }
        
        @objc func donedatePicker(){
-           
            let formatter = DateFormatter()
            formatter.dateFormat = "dd/MM/yyyy"
-           txtDatePicker.text = formatter.string(from: datePicker.date)
+        txtDatePicker.text = formatter.string(from: datePicker.date)
            self.view.endEditing(true)
-       }
+//           let formatter = DateFormatter()
+//           formatter.dateFormat = "dd/MM/yyyy"
+//           txtDatePicker.text = formatter.string(from: datePicker.date)
+//           self.view.endEditing(true)
+           }
        
        @objc func cancelDatePicker(){
            self.view.endEditing(true)
