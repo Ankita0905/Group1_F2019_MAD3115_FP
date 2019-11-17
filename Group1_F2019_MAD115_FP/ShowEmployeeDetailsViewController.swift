@@ -53,13 +53,7 @@ class ShowEmployeeDetailsViewController: UIViewController,UITableViewDelegate,UI
             //FixedBased Employee
             
             idView.text="Employee ID :\(String(describing: employeeFixedDetails!.empID))\nEmployee Name : \(String(describing: employeeFixedDetails!.name))\nEmployee DOB : \(String(describing: employeeFixedDetails!.DOB.getForamttedDate()))\nEmployee Type : \(employeeFixedDetails!.empType)\nFixed Amount : \(String(describing: employeeFixedDetails!.fixedAmount))\nTotal Pay Amount : \(String(describing: employeeFixedDetails!.calEarnings().currencyFormat()))"
-
-            
-            
-        }
-        
-        
-        
+                    }
         
         updateEmp()
         self.billListTable.delegate=self
@@ -68,9 +62,6 @@ class ShowEmployeeDetailsViewController: UIViewController,UITableViewDelegate,UI
         
     }
     let updateEmployee = UIBarButtonItem()
-    
-     
-
     
     private func updateEmp()
     {
