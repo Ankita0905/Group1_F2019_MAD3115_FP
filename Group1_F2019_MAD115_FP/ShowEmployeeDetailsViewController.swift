@@ -47,7 +47,7 @@ class ShowEmployeeDetailsViewController: UIViewController,UITableViewDelegate,UI
 //               emailView.text=("\(String(describing: employeeFullTimeDetails!.bonus))")
 //            totalAmountView.text=("\(String(describing: employeeFullTimeDetails!.calEarnings().currencyFormat()))")
         }
-        else if employeeDetails?.empType=="CommissionBased"
+        else if employeeDetails?.empType=="CommissionBasedPT"
         {
         //CommissionBased Employee
             idView.text="Employee ID :\(String(describing: employeeCommissionDetails!.empID))\nEmployee Name : \(String(describing: employeeCommissionDetails!.name))\nEmployee DOB : \(String(describing: employeeCommissionDetails!.DOB.getForamttedDate()))\nEmployee Type : \(employeeCommissionDetails!.empType)\nHours Worked : \(String(describing: employeeCommissionDetails!.calHours()))  \nCommission % : \(String(describing: employeeCommissionDetails!.commissionPer))\nTotal Pay Amount : \(String(describing: employeeCommissionDetails!.calEarnings().currencyFormat()))"
@@ -60,7 +60,7 @@ class ShowEmployeeDetailsViewController: UIViewController,UITableViewDelegate,UI
 //            totalAmountView.text=("\(String(describing: employeeCommissionDetails!.calEarnings().currencyFormat()))")
         }
         
-        else if employeeDetails?.empType=="FixedBased"
+        else if employeeDetails?.empType=="FixedBasedPT"
         {
         
             //FixedBased Employee

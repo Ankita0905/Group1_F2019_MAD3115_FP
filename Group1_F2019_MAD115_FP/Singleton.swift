@@ -101,6 +101,13 @@ class Singleton : NSObject
     {
         let i1=Intern(IempID: 1, IName: "Ankita Jain", ISchoolName: "Lambton", IEmpType: "Intern", IDOB: date)
         AddEmployee(employee: i1)
+        let f1 = FullTime(FTEmpID: 2, FTEmptype: "FullTime", FTEmpName: "Karan Kumar", FTDob: date, Salary: 933.10, Bonus: 837.2)
+        AddEmployee(employee: f1)
+        let cPt1=CommissionBasedPartTime(ComTEmpID: 3, ComTEmptype: "CommissionBasedPT", ComTEmpName: "Sandeep", ComTDob: date, Rate: 64.2, HoursWorked: 83.4, CommissionPer: 5)
+        AddEmployee(employee: cPt1)
+    
+        let fbPt1=FixedBasedPartTime(FixTEmpID: 4, FixTEmptype: "FixedBasedPT", FixTEmpName: "Kamal", FixTDob: date, Rate: 46.4, HoursWorked: 64, FixedAmount: 32)
+        AddEmployee(employee: fbPt1)
     }
     
     
@@ -113,6 +120,7 @@ class Singleton : NSObject
             {
                 if empID == k
                 {
+                    print(v)
                     return v
                 }
             }

@@ -115,11 +115,11 @@ class AddEmployeeDetailViewController: UIViewController {
             else if empTypeSeg.selectedSegmentIndex==2{
                 if partTimeTypeSeg.selectedSegmentIndex==0
                 {
-                    ins.addCommissionEmployee(ComTID: 1, ComTtype: "CommissionBased", ComTName: full_name, ComDob: datePicker.date, Rate: rate, HoursWorked: hrsWorked, CommissionPer: commissionPer)
+                    ins.addCommissionEmployee(ComTID: 1, ComTtype: "CommissionBasedPT", ComTName: full_name, ComDob: datePicker.date, Rate: rate, HoursWorked: hrsWorked, CommissionPer: commissionPer)
                 }
                 else if partTimeTypeSeg.selectedSegmentIndex==1
                 {
-                    ins.addFixedEmployee(FixID: 1, Fixtype: "FixedBased", FixName: full_name, FixDob: datePicker.date, Rate: rate, HoursWorked: hrsWorked, FixedAmount: fixedAmount)
+                    ins.addFixedEmployee(FixID: 1, Fixtype: "FixedBasedPT", FixName: full_name, FixDob: datePicker.date, Rate: rate, HoursWorked: hrsWorked, FixedAmount: fixedAmount)
                 }
             }
             
