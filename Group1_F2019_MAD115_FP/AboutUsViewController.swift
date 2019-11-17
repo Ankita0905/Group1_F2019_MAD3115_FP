@@ -8,23 +8,47 @@
 
 import UIKit
 
-class AboutUsViewController: UIViewController {
+import WebKit
 
+class AboutUsViewController: UIViewController, WKNavigationDelegate{
+
+    @IBOutlet weak var aboutWK: WKWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        aboutWK.navigationDelegate = self
+        aboutWK.allowsBackForwardNavigationGestures = true
+           // self.loadFromURL()
+           self.loadFromFile()
 
-        // Do any additional setup after loading the view.
+        }
+        func loadFromURL(){
+                    let url = URL(string: "https://www.lambtoncollege.ca/About_Us/Our_College/President/A_Message_from_President_Judith_Morris/")
+                   let urlReq = URLRequest(url: url!)
+                   aboutWK.load(urlReq)
+        }
+    func loadFromFile()
+    {
+        let localfilePath = Bundle.main.url(forResource: "aboutUs", withExtension: "html")
+        let myRequest = URLRequest(url: localfilePath!)
+        aboutWK.load(myRequest)
+       
+        
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+//    @IBAction func WkButton(_ sender: UIBarButtonItem) {
+//
+//        switch sender.tag {
+//            case 0:
+//                if aboutWK.canGoForward{
+//                    aboutWK.goForward()
+//                }
+//            case 1:
+//                    aboutWK.goBack()
+//            case 2:
+//                aboutWK.reload()
+//            default:
+//                print("Nothing to do")
+//            }
+//        }
+        
     }
-    */
 
-}
