@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TVr-rM-Ir0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TVr-rM-Ir0">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,11 +19,17 @@
                                 <rect key="frame" x="242" y="498" width="131" height="131"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="round-information-button" backgroundImage="border"/>
+                                <connections>
+                                    <segue destination="bgY-HY-fug" kind="show" id="hoZ-iR-T5K"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5XU-fv-JD0">
                                 <rect key="frame" x="42" y="505" width="131" height="124"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="phone-call" backgroundImage="border"/>
+                                <connections>
+                                    <segue destination="JFn-PX-fJM" kind="show" id="GQ7-16-IX0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTE-pD-HvS">
                                 <rect key="frame" x="142" y="668" width="130" height="130"/>
@@ -461,6 +467,49 @@
             </objects>
             <point key="canvasLocation" x="1971.0144927536232" y="-650.22321428571422"/>
         </scene>
+        <!--About Us View Controller-->
+        <scene sceneID="Xha-kX-TFS">
+            <objects>
+                <viewController id="bgY-HY-fug" customClass="AboutUsViewController" customModule="Group1_F2019_MAD115_FP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qen-Qh-VJe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Sry-ci-p4a"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8xU-Aj-OpI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SMi-48-Ukc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="428" y="68"/>
+        </scene>
+        <!--Contact Us View Controller-->
+        <scene sceneID="5GJ-5C-G7R">
+            <objects>
+                <viewController id="JFn-PX-fJM" customClass="ContactUsViewController" customModule="Group1_F2019_MAD115_FP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W1w-Cv-pQj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xb0-vT-2qa">
+                                <rect key="frame" x="130" y="406" width="165" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Contact Us"/>
+                                <connections>
+                                    <action selector="btnContactUs:" destination="JFn-PX-fJM" eventType="touchUpInside" id="ysL-Ot-4Ap"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="TmV-mJ-24d"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="eXG-Xs-dIL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G70-5K-Wgh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1989.8550724637682" y="67.633928571428569"/>
+        </scene>
         <!--Show Customer Details View Controller-->
         <scene sceneID="MWH-Pm-g5m">
             <objects>
@@ -509,7 +558,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pih-Lq-vh8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3769.5652173913045" y="-650.22321428571422"/>
+            <point key="canvasLocation" x="3071" y="-650"/>
         </scene>
         <!--Add New Bill View Controller-->
         <scene sceneID="nbd-o6-zSH">
@@ -576,7 +625,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VR5-id-grG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4446" y="-652"/>
+            <point key="canvasLocation" x="4023" y="-650"/>
         </scene>
     </scenes>
     <resources>

@@ -12,6 +12,8 @@
 		E07F1BAC237DFEC900F07330 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E07F1BAA237DFEC900F07330 /* Main.storyboard */; };
 		E07F1BAE237DFECC00F07330 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E07F1BAD237DFECC00F07330 /* Assets.xcassets */; };
 		E07F1BB1237DFECC00F07330 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E07F1BAF237DFECC00F07330 /* LaunchScreen.storyboard */; };
+		E08B72A22380CA6800C78634 /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08B72A12380CA6800C78634 /* ContactUsViewController.swift */; };
+		E08B72A42380CA9400C78634 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08B72A32380CA9400C78634 /* AboutUsViewController.swift */; };
 		E0F11066237E3D5400B822BB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F11065237E3D5400B822BB /* LoginViewController.swift */; };
 		E0F11072237E3D8B00B822BB /* Users.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0F11067237E3D8A00B822BB /* Users.plist */; };
 		E0F11073237E3D8B00B822BB /* AddEmployeeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F11068237E3D8A00B822BB /* AddEmployeeDetailViewController.swift */; };
@@ -41,6 +43,8 @@
 		E07F1BAD237DFECC00F07330 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E07F1BB0237DFECC00F07330 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E07F1BB2237DFECC00F07330 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E08B72A12380CA6800C78634 /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
+		E08B72A32380CA9400C78634 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		E0F11065237E3D5400B822BB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E0F11067237E3D8A00B822BB /* Users.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Users.plist; sourceTree = "<group>"; };
 		E0F11068237E3D8A00B822BB /* AddEmployeeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEmployeeDetailViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +114,8 @@
 				E07F1BAD237DFECC00F07330 /* Assets.xcassets */,
 				E07F1BAF237DFECC00F07330 /* LaunchScreen.storyboard */,
 				E07F1BB2237DFECC00F07330 /* Info.plist */,
+				E08B72A12380CA6800C78634 /* ContactUsViewController.swift */,
+				E08B72A32380CA9400C78634 /* AboutUsViewController.swift */,
 			);
 			path = Group1_F2019_MAD115_FP;
 			sourceTree = "<group>";
@@ -220,6 +226,7 @@
 			files = (
 				E0F110A6237F60C100B822BB /* Vehicle.swift in Sources */,
 				E0F11077237E3D8B00B822BB /* CustomerListViewController.swift in Sources */,
+				E08B72A22380CA6800C78634 /* ContactUsViewController.swift in Sources */,
 				E0F11066237E3D5400B822BB /* LoginViewController.swift in Sources */,
 				E0F110A0237F60A400B822BB /* Intern.swift in Sources */,
 				E0F11075237E3D8B00B822BB /* Singleton.swift in Sources */,
@@ -237,6 +244,7 @@
 				E0F110B4237F60FA00B822BB /* IPrintable.swift in Sources */,
 				E0F11074237E3D8B00B822BB /* AddNewBillViewController.swift in Sources */,
 				E0F11079237E3D8B00B822BB /* ShowCustomerDetailsViewController.swift in Sources */,
+				E08B72A42380CA9400C78634 /* AboutUsViewController.swift in Sources */,
 				E07F1BA7237DFEC900F07330 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
