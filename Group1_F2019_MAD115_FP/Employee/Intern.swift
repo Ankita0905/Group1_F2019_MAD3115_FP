@@ -17,12 +17,12 @@ class Intern:Employee
     
    
     
-    init(IempID:Int,IName:String,ISchoolName:String,IEmpType: String,IDOB : Date)
+    init(IempID:Int,IName:String,ISchoolName:String,IEmpType: String,IDOB : Date,IEmail:String)
     {
         print(ISchoolName)
         self.schoolName=ISchoolName
         print("welcome\(schoolName)")
-        super.init(EmpID: IempID, EmpName: IName, EmpDOB: IDOB,  EmpType: IEmpType)
+        super.init(EmpID: IempID, EmpName: IName, EmpDOB: IDOB,  EmpType: IEmpType , EmpEmail:IEmail)
         
     }
     

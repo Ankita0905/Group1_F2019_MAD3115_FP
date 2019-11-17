@@ -13,16 +13,18 @@ class Employee
     var name: String
     var DOB: Date
     var empType : String
+    var empEmail :String
     var employeeDictionary  = [Int:Employee]()
     
     
     
-    init(EmpID : Int,EmpName:String,EmpDOB: Date,EmpType: String)
+    init(EmpID : Int,EmpName:String,EmpDOB: Date,EmpType: String,EmpEmail: String)
     {
         empID=EmpID
         name = EmpName
         empType=EmpType
         DOB=EmpDOB
+        empEmail=EmpEmail
     
     }
     init()
@@ -31,6 +33,7 @@ class Employee
         self.name=String()
         self.DOB=Date()
         self.empType=String()
+        self.empEmail=String()
     }
     
    

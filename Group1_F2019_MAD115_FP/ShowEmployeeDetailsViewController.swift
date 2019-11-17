@@ -9,12 +9,13 @@
 import UIKit
 
 class ShowEmployeeDetailsViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
-    
+    let i=Singleton.getInstance()
     var employeeDetails:Employee?=nil
     var employeeInternDetails:Intern?=nil
     var employeeFullTimeDetails:FullTime?=nil
     var employeeCommissionDetails:CommissionBasedPartTime?=nil
     var employeeFixedDetails:FixedBasedPartTime?=nil
+    @IBOutlet weak var navBar: UINavigationItem!
     @IBOutlet weak var idView: UILabel!
     @IBOutlet weak var firstNameView: UILabel!
     @IBOutlet weak var totalAmountView: UILabel!
@@ -24,6 +25,7 @@ class ShowEmployeeDetailsViewController: UIViewController,UITableViewDelegate,UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         //Intern employee
         if employeeDetails?.empType=="Intern"
         {
@@ -65,15 +67,22 @@ class ShowEmployeeDetailsViewController: UIViewController,UITableViewDelegate,UI
     
     private func updateEmp()
     {
-        
+
         let btnUpdate=UIBarButtonItem(title: "Update Emp", style: .done, target: self, action: #selector(ShowEmployeeDetailsViewController.update(sender:)))
         navigationItem.rightBarButtonItem=btnUpdate
-        
+
+
     }
-    
+
     @objc func update(sender: UIBarButtonItem){
-        let clvc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "updateVC")
-        self.navigationController?.pushViewController(clvc, animated: true)
+        let clvc = UIStoryboard.init(name: "Main", bundle: Bundle.main)
+            let updateDetailVC=clvc.instantiateViewController(withIdentifier: "updateVC") as! UpdateEmpViewController
+        
+        
+        updateDetailVC.UemployeeDetails=i.returnEmployeeObj(empID: employeeDetails!.empID)
+        updateDetailVC.UemployeeInternDetails=i.returnEmployeeObj(empID: employeeInternDetails!.empID) as! Intern
+        
+        self.navigationController?.pushViewController(updateDetailVC, animated: true)
 
     }
     

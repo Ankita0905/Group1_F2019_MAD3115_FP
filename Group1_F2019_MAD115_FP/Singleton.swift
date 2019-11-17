@@ -49,6 +49,14 @@ class Singleton : NSObject
                 self.addIemployee(Iemployee: temp)
 
            }
+    
+    func updateInternEmployee(EID : Int,EName:String,EDOB: Date,EType: String,Ischool: String)
+    {
+     
+     let temp = Intern(IempID: EID, IName: EName, ISchoolName: Ischool, IEmpType: EType, IDOB: EDOB)
+         self.addIemployee(Iemployee: temp)
+
+    }
 
     func addIemployee(Iemployee: Intern)
     {
@@ -120,7 +128,6 @@ class Singleton : NSObject
             {
                 if empID == k
                 {
-                    print(v)
                     return v
                 }
             }

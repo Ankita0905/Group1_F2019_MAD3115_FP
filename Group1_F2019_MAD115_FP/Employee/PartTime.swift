@@ -13,11 +13,11 @@ class PartTime:Employee
     var hoursworked:Float
 
   
-    init(PTEmpID: Int,PTEmptype: String, PTEmpName:String,PTDob:Date,Rate:Float,HoursWorked:Float)
+    init(PTEmpID: Int,PTEmptype: String, PTEmpName:String,PTEmail: String,PTDob:Date,Rate:Float,HoursWorked:Float)
     {
         self.rate=Rate
         self.hoursworked=HoursWorked
-        super.init(EmpID: PTEmpID,EmpName:PTEmpName, EmpDOB:PTDob, EmpType: PTEmptype)
+        super.init(EmpID: PTEmpID,EmpName:PTEmpName, EmpDOB:PTDob, EmpType: PTEmptype,EmpEmail:PTEmail)
    }
     
     

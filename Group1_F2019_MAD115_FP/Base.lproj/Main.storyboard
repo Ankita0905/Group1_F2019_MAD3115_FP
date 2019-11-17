@@ -292,6 +292,9 @@
                                     <segment title="Full Time"/>
                                     <segment title="Part Time"/>
                                 </segments>
+                                <connections>
+                                    <action selector="updateTypeSeg:" destination="1q6-Mc-OSc" eventType="valueChanged" id="x3e-SZ-1hn"/>
+                                </connections>
                             </segmentedControl>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sov-ie-Ekg">
                                 <rect key="frame" x="19" y="259" width="374" height="30"/>
@@ -382,6 +385,9 @@
                                             <segment title="Commission Based"/>
                                             <segment title="Fixed Based"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="updatePartTimeSeg:" destination="1q6-Mc-OSc" eventType="valueChanged" id="0ME-7P-I6N"/>
+                                        </connections>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type Of Part Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iY-Vy-cto">
                                         <rect key="frame" x="0.0" y="123" width="139" height="21"/>
@@ -881,6 +887,7 @@
                     <connections>
                         <outlet property="billListTable" destination="rhh-Ef-vVz" id="QEF-SP-GkP"/>
                         <outlet property="idView" destination="bJC-Xk-ZrO" id="Rpx-cq-LEO"/>
+                        <outlet property="navBar" destination="FKT-Si-Ybw" id="UC4-f0-MVf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pih-Lq-vh8" userLabel="First Responder" sceneMemberID="firstResponder"/>
