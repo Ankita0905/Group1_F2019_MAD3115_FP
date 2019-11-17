@@ -90,7 +90,17 @@ class Singleton : NSObject
     {
         dict.employeeDictionary.updateValue(FixEmployee, forKey: FixEmployee.empID)
     }
-        func returnEmployeeObj(empID : Int) -> Employee?
+        
+    func createEmp()
+    {
+        
+    }
+    
+    
+    
+    
+    
+    func returnEmployeeObj(empID : Int) -> Employee?
         {
             for (k,v) in dict.employeeDictionary
             {
