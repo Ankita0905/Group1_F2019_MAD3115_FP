@@ -11,15 +11,16 @@ import Foundation
 class Vehicle
 {
     
-    
+    var id:Int
     var make : String
     var plate : String
     var type : String
     
-    init(make : String , plate : String) {
+    init(make : String , plate : String,ID: Int) {
         self.make = make
         self.plate = plate
         self.type=String()
+        self.id=ID
         
     }
   

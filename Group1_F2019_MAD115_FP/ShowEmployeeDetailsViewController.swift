@@ -97,14 +97,26 @@ class ShowEmployeeDetailsViewController: UIViewController,UITableViewDelegate,UI
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (1)
+        return i.returnVehicleCount()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "billCell")!
+//        let a = i.returnVehicleObj(Id: Int(indexPath.row+1))
+//        print(a!.id)
+       // cell.textLabel!.text = (a!.plate)
+        let varray=employeeDetails!.returnVehicleArray()
+        let veh=varray[indexPath.row]
+       var details=""
+        let typeCar=veh as! Vehicle
+        if typeCar.type=="Car"
+        {
+        cell.textLabel?.numberOfLines=8
+        details="\nEmployee has a : \(typeCar.type)"
+        }
         
-       
-       
+        cell.textLabel?.text="\(details)"
+       return cell
         
 //        let currentBill = customerdetails!.billDictionary[indexPath.row + 1]
 //    var detail = ""
@@ -127,7 +139,7 @@ class ShowEmployeeDetailsViewController: UIViewController,UITableViewDelegate,UI
 //        }
 //       cell.textLabel?.text = "Bill ID : \(String(describing: currentBill!.Id)) \nBill Date : \(String(describing: currentBill!.billDate.getForamttedDate())) \nBill Total : \(String(describing: currentBill!.totalBillAmount.currency())) \(detail)"
         //cell.textLabel?.text="\(details)"
-        return cell
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {

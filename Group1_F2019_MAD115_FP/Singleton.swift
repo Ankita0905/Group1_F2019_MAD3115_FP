@@ -127,19 +127,27 @@ class Singleton : NSObject
     {
         dict.employeeDictionary.updateValue(employee, forKey: employee.empID)
     }
+//    func addVehicle(v:Vehicle) {
+//        dict.vdict.updateValue(v, forKey: v.plate)
+//    
+//        }
+    
+    
     func createEmp()
     {
+        let c1=Car(noOfDoors: 4, Make: "Honda", plate: "ABC101", model: "Civic", year: "2009", Cid: 1)
+        let c2=Car(noOfDoors: 2, Make: "Ferrari", plate: "KAr123", model: "F1", year: "2018", Cid: 2)
         let i1=Intern(IempID: 1, IName: "Ankita Jain", ISchoolName: "Lambton", IEmpType: "Intern", IDOB: date,IEmail: "ankita@gmail.com")
-        AddEmployee(employee: i1)
-        let c1=Car(noOfDoors: 4, Make: "Honda", plate: "ABC101", model: "Civic", year: "2009")
+    
         i1.addVehicle(v: c1)
-        
+        i1.addVehicle(v: c2)
+         AddEmployee(employee: i1)
         let f1 = FullTime(FTEmpID: 2, FTEmptype: "FullTime", FTEmpName: "Karan Kumar", FTDob: date, FTEmail:"karan@gmail.com", Salary: 933.10, Bonus: 837.2)
         AddEmployee(employee: f1)
-        let c2=Car(noOfDoors: 2, Make: "Ferrari", plate: "KAr123", model: "F1", year: "2018")
-        f1.addVehicle(v: c2)
-        let m1=Motorcycle(make: "BMW", plate: "KAR234", model: "RR1000", year: "2019")
-        f1.addVehicle(v: m1)
+        let c3=Car(noOfDoors: 2, Make: "Ferrari", plate: "KAr123", model: "F1", year: "2018", Cid: 1)
+       // f1.addVehicle(v: c3)
+        let m1=Motorcycle(make: "BMW", plate: "KAR234", model: "RR1000", year: "2019", Mid: 2)
+       // f1.addVehicle(v: m1)
         
         let cPt1=CommissionBasedPartTime(ComTEmpID: 3, ComTEmptype: "CommissionBasedPT", ComTEmpName: "Sandeep",ComTEmail: "sandeep@gmail.com", ComTDob: date, Rate: 64.2, HoursWorked: 83.4, CommissionPer: 5)
         AddEmployee(employee: cPt1)
@@ -171,11 +179,27 @@ class Singleton : NSObject
         
         
        
-       
+    func returnVehicleObj(Id: Int) -> Vehicle?
+       {
+        for (k,v) in dict.vdict
+           {
+               if Id == k
+               {
+                    print(v)
+                   return v
+               }
+           }
+           return nil
+           
+       }
 
         
       
-       
+       func returnVehicleCount() -> Int
+              {
+               // print(dict.vdict.count)
+                return dict.vdict.count
+              }
       
         
         

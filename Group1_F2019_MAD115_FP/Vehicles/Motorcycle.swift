@@ -16,9 +16,9 @@ class Motorcycle : Vehicle
     var model : String = ""
     var yMake = String()
     
-    init(make : String , plate : String, model : String,  year: String)
+    init(make : String , plate : String, model : String,  year: String,Mid:Int)
     {
-        super.init(make: make, plate: plate)
+        super.init(make: make, plate: plate, ID: Mid)
         self.model = model
         self.yMake = year
         self.type="MotorCycle"

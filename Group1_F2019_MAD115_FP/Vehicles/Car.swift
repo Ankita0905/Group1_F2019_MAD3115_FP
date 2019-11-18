@@ -15,12 +15,13 @@ class Car : Vehicle
     
     
     
-    init(noOfDoors : Int,Make  : String, plate : String ,model : String, year : String) {
-        super.init(make: Make, plate: plate)
+    init(noOfDoors : Int,Make  : String, plate : String ,model : String, year : String,Cid:Int) {
+        super.init(make: Make, plate: plate, ID: Cid)
         self.model = model
         self.yMake = year
         self.noOfDoors = noOfDoors
         self.type="Car"
+        
         }
     
 
