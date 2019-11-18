@@ -43,17 +43,19 @@ class Employee
         return 1000
     }
     
+    
+   
     func addVehicle(v:Vehicle) {
         vdict.updateValue(v, forKey: v.plate)
         
     }
-    func returnVehicleArray() -> Array<Vehicle>
-     {
-         var t : Array<Vehicle> = []
-         for i in vdict.values
-         {
-             t.append(i)
-         }
-         return t
-     }
+//    func returnVehicleArray() -> Array<Vehicle>
+//     {
+//         var t : Array<Vehicle> = []
+//         for i in vdict.values
+//         {
+//             t.append(i)
+//         }
+//         return t
+//     }
 }
