@@ -831,7 +831,7 @@
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rhh-Ef-vVz">
-                                <rect key="frame" x="20" y="415" width="374" height="433"/>
+                                <rect key="frame" x="20" y="415" width="374" height="395"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -852,12 +852,32 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eoa-yb-9WL">
+                                <rect key="frame" x="29" y="832" width="116" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Delete Vehicle"/>
+                                <connections>
+                                    <action selector="btnDeleteVehiocle:" destination="SfW-Zo-jAE" eventType="touchUpInside" id="hAm-mh-YtQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dD7-OU-oeJ">
+                                <rect key="frame" x="266" y="832" width="123" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Update Vehicle"/>
+                                <connections>
+                                    <action selector="btnUpdateVehicle:" destination="SfW-Zo-jAE" eventType="touchUpInside" id="vB1-f9-41X"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="y43-IS-eZG"/>
                     </view>
                     <connections>
                         <outlet property="billListTable" destination="rhh-Ef-vVz" id="QEF-SP-GkP"/>
+                        <outlet property="btnUpdate" destination="dD7-OU-oeJ" id="xZ7-zW-fLr"/>
+                        <outlet property="btndel" destination="eoa-yb-9WL" id="cLX-Me-nla"/>
                         <outlet property="idView" destination="bJC-Xk-ZrO" id="Rpx-cq-LEO"/>
                         <outlet property="navBar" destination="FKT-Si-Ybw" id="UC4-f0-MVf"/>
                     </connections>

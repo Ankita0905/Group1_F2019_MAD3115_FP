@@ -22,6 +22,41 @@ class ShowEmployeeDetailsViewController: UIViewController,UITableViewDelegate,UI
     @IBOutlet weak var lastNameView: UILabel!
     @IBOutlet weak var emailView: UILabel!
     @IBOutlet weak var billListTable: UITableView!
+    @IBOutlet weak var btnUpdate: UIButton!
+    
+    @IBOutlet weak var btndel: UIButton!
+    @IBAction func btnUpdateVehicle(_ sender: UIButton) {
+        
+    }
+    @IBAction func btnDeleteVehiocle(_ sender: UIButton)
+    {
+        self.showEditing()
+    }
+    @objc func showEditing()
+    {
+        if(self.billListTable.isEditing == true)
+        {
+            self.billListTable.isEditing = false
+            btndel.titleLabel?.text="Delete"
+        }
+        else
+        {
+            self.billListTable.isEditing = true
+            btndel.titleLabel?.text="Done"
+            
+        }
+    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+           // self.billListTable.remove(at: indexPath.row)
+           self.billListTable.deleteRows(at: [indexPath], with: .fade)
+        }
+        else if editingStyle == .insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }
+        
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
