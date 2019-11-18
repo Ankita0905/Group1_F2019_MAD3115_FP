@@ -487,6 +487,56 @@
             </objects>
             <point key="canvasLocation" x="2442.0289855072465" y="-1333.2589285714284"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="n9a-bD-fmw">
+            <objects>
+                <viewController id="Hok-Gw-93U" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yjn-IU-6Eh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVf-2k-9Cn">
+                                <rect key="frame" x="164" y="480" width="60" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Update"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Make" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0wK-yw-Tdy">
+                                <rect key="frame" x="20" y="172" width="60" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Model" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hkh-53-hhr">
+                                <rect key="frame" x="20" y="246" width="48" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L79-Pw-srk">
+                                <rect key="frame" x="101" y="159" width="293" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bnh-QQ-5F3">
+                                <rect key="frame" x="101" y="233" width="293" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="z9a-Ea-sJu"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5GP-ck-60o"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ND1-Ps-HL9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3473.913043478261" y="-1322.5446428571429"/>
+        </scene>
         <!--Add Employee Detail View Controller-->
         <scene sceneID="3m6-fU-Y8O">
             <objects>
@@ -868,6 +918,7 @@
                                 <state key="normal" title="Update Vehicle"/>
                                 <connections>
                                     <action selector="btnUpdateVehicle:" destination="SfW-Zo-jAE" eventType="touchUpInside" id="vB1-f9-41X"/>
+                                    <segue destination="Hok-Gw-93U" kind="show" id="a7a-ZI-g8d"/>
                                 </connections>
                             </button>
                         </subviews>

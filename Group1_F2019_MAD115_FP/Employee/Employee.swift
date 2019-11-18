@@ -50,6 +50,10 @@ class Employee
 //        print(vdict.keys)
 //        print(vdict.values)
     }
+    func removevehicle(id:Int)
+    {
+        vdict.removeValue(forKey: id)
+    }
     
     func returnVehicleArray() -> Array<Vehicle>
      {
