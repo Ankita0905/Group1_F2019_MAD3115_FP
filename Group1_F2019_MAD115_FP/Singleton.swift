@@ -143,12 +143,12 @@ class Singleton : NSObject
         i1.addVehicle(v: c2)
          AddEmployee(employee: i1)
         let f1 = FullTime(FTEmpID: 2, FTEmptype: "FullTime", FTEmpName: "Karan Kumar", FTDob: date, FTEmail:"karan@gmail.com", Salary: 933.10, Bonus: 837.2)
-        AddEmployee(employee: f1)
+       
         let c3=Car(noOfDoors: 2, Make: "Ferrari", plate: "KAr123", model: "F1", year: "2018", Cid: 1)
-       // f1.addVehicle(v: c3)
+       f1.addVehicle(v: c3)
         let m1=Motorcycle(make: "BMW", plate: "KAR234", model: "RR1000", year: "2019", Mid: 2)
-       // f1.addVehicle(v: m1)
-        
+       f1.addVehicle(v: m1)
+         AddEmployee(employee: f1)
         let cPt1=CommissionBasedPartTime(ComTEmpID: 3, ComTEmptype: "CommissionBasedPT", ComTEmpName: "Sandeep",ComTEmail: "sandeep@gmail.com", ComTDob: date, Rate: 64.2, HoursWorked: 83.4, CommissionPer: 5)
         AddEmployee(employee: cPt1)
     

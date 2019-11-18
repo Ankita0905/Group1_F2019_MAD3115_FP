@@ -97,7 +97,7 @@ class ShowEmployeeDetailsViewController: UIViewController,UITableViewDelegate,UI
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return i.returnVehicleCount()
+        return (employeeDetails?.returnVehicleArray().count)!
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -108,13 +108,25 @@ class ShowEmployeeDetailsViewController: UIViewController,UITableViewDelegate,UI
         let varray=employeeDetails!.returnVehicleArray()
         let veh=varray[indexPath.row]
        var details=""
-        let typeCar=veh as! Vehicle
-        if typeCar.type=="Car"
+        var typeveh=veh as! Vehicle
+       
+      
+        if typeveh.type=="Car"
         {
+             let typeCar=veh as! Car
         cell.textLabel?.numberOfLines=8
-        details="\nEmployee has a : \(typeCar.type)"
+            details="\nEmployee has a : \(typeCar.type)\nMake : \(typeCar.make)\nPlate number : \(typeCar.plate)\nModel : \(typeCar.model)\nNumber of doors : \(typeCar.noOfDoors)\nYear : \(typeCar.yMake)"
         }
-        
+        else if typeveh.type=="MotorCycle"
+        {
+             let typeMotorcycle=veh as! Motorcycle
+            cell.textLabel?.numberOfLines=8
+            details="\nEmployee has a : \(typeMotorcycle.type)\nMake : \(typeMotorcycle.make)\nPlate number : \(typeMotorcycle.plate)\nModel : \(typeMotorcycle.model)\nYear : \(typeMotorcycle.yMake)"
+        }
+        else if typeveh.type=="nil"
+        {
+            details="Employee Has no vehicle"
+        }
         cell.textLabel?.text="\(details)"
        return cell
         
