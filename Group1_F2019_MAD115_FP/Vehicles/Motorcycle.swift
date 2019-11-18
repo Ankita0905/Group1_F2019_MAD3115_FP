@@ -21,13 +21,8 @@ class Motorcycle : Vehicle
         super.init(make: make, plate: plate)
         self.model = model
         self.yMake = year
+        self.type="MotorCycle"
         
     }
-    override func printMyData()
-        {
-        super.printMyData()
-        print("Model : \(model)")
-        print("Year of Make : \(yMake)")
-
-    }
+   
 }

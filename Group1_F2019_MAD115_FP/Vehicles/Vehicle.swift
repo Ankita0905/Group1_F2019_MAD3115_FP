@@ -8,26 +8,19 @@
 
 import Foundation
 // by Kamal and Sandeep
-class Vehicle : IPrintable
+class Vehicle
 {
     
     
     var make : String
     var plate : String
+    var type : String
     
     init(make : String , plate : String) {
         self.make = make
         self.plate = plate
-        
-        
-    }
-    
-    
-    
-    func printMyData() {
-        print("Make of Vehicle :\(make)")
-        print("Vehicle : \(plate)")
+        self.type=String()
         
     }
-    
+  
 }

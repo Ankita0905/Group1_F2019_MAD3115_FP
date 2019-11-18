@@ -16,7 +16,7 @@ class Employee
     var empEmail :String
     var employeeDictionary  = [Int:Employee]()
     
-    
+    var vdict = Dictionary<String, Vehicle>()
     
     init(EmpID : Int,EmpName:String,EmpDOB: Date,EmpType: String,EmpEmail: String)
     {
@@ -43,5 +43,17 @@ class Employee
         return 1000
     }
     
-    
+    func addVehicle(v:Vehicle) {
+        vdict.updateValue(v, forKey: v.plate)
+        
+    }
+    func returnVehicleArray() -> Array<Vehicle>
+     {
+         var t : Array<Vehicle> = []
+         for i in vdict.values
+         {
+             t.append(i)
+         }
+         return t
+     }
 }

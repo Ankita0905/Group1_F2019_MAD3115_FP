@@ -102,6 +102,10 @@ class ShowEmployeeDetailsViewController: UIViewController,UITableViewDelegate,UI
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "billCell")!
+        
+        
+       
+        
 //        let currentBill = customerdetails!.billDictionary[indexPath.row + 1]
 //    var detail = ""
 //        if currentBill?.billType == billTypes.Mobile{
@@ -122,6 +126,7 @@ class ShowEmployeeDetailsViewController: UIViewController,UITableViewDelegate,UI
 //            }
 //        }
 //       cell.textLabel?.text = "Bill ID : \(String(describing: currentBill!.Id)) \nBill Date : \(String(describing: currentBill!.billDate.getForamttedDate())) \nBill Total : \(String(describing: currentBill!.totalBillAmount.currency())) \(detail)"
+        //cell.textLabel?.text="\(details)"
         return cell
     }
 

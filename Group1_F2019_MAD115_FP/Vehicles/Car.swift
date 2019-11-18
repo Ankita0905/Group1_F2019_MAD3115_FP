@@ -20,14 +20,8 @@ class Car : Vehicle
         self.model = model
         self.yMake = year
         self.noOfDoors = noOfDoors
+        self.type="Car"
         }
     
-    override func printMyData()
-    {
-        super.printMyData()
-        print("Number of Doors \(noOfDoors)")
-        print("Model : \(model)")
-        print("Year of Make : \(yMake)")
-        
-    }
+
 }
