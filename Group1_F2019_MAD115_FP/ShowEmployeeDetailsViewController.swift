@@ -111,19 +111,19 @@ class ShowEmployeeDetailsViewController: UIViewController,UITableViewDelegate,UI
         var typeveh=veh as! Vehicle
        
       
-        if typeveh.type=="Car"
+        if typeveh.type.elementsEqual("Car")
         {
              let typeCar=veh as! Car
         cell.textLabel?.numberOfLines=8
             details="\nEmployee has a : \(typeCar.type)\nMake : \(typeCar.make)\nPlate number : \(typeCar.plate)\nModel : \(typeCar.model)\nNumber of doors : \(typeCar.noOfDoors)\nYear : \(typeCar.yMake)"
         }
-        else if typeveh.type=="MotorCycle"
+        else if typeveh.type.elementsEqual("MotorCycle")
         {
              let typeMotorcycle=veh as! Motorcycle
             cell.textLabel?.numberOfLines=8
             details="\nEmployee has a : \(typeMotorcycle.type)\nMake : \(typeMotorcycle.make)\nPlate number : \(typeMotorcycle.plate)\nModel : \(typeMotorcycle.model)\nYear : \(typeMotorcycle.yMake)"
         }
-        else if typeveh.type=="nil"
+        else if typeveh.type==""
         {
             details="Employee Has no vehicle"
         }
