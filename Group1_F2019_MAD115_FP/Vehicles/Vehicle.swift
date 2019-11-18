@@ -19,7 +19,7 @@ class Vehicle
     init(make : String , plate : String,ID: Int) {
         self.make = make
         self.plate = plate
-        self.type=String()
+        self.type=""
         self.id=ID
         
     }

@@ -123,11 +123,12 @@ class ShowEmployeeDetailsViewController: UIViewController,UITableViewDelegate,UI
             cell.textLabel?.numberOfLines=8
             details="\nEmployee has a : \(typeMotorcycle.type)\nMake : \(typeMotorcycle.make)\nPlate number : \(typeMotorcycle.plate)\nModel : \(typeMotorcycle.model)\nYear : \(typeMotorcycle.yMake)"
         }
-        else if typeveh.type==""
+        else if typeveh.type.elementsEqual("")
         {
             details="Employee Has no vehicle"
         }
         cell.textLabel?.text="\(details)"
+        print(details)
        return cell
         
 //        let currentBill = customerdetails!.billDictionary[indexPath.row + 1]
