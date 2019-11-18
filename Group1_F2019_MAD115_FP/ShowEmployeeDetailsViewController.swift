@@ -105,13 +105,13 @@ class ShowEmployeeDetailsViewController: UIViewController,UITableViewDelegate,UI
 //        let a = i.returnVehicleObj(Id: Int(indexPath.row+1))
 //        print(a!.id)
        // cell.textLabel!.text = (a!.plate)
-        let varray=employeeDetails!.returnVehicleArray()
-        let veh=varray[indexPath.row]
+        let vArray=employeeDetails!.returnVehicleArray()
+        let veh=vArray[indexPath.row]
        var details=""
         var typeveh=veh as! Vehicle
        
-      
-        if typeveh.type.elementsEqual("Car")
+     
+         if typeveh.type.elementsEqual("Car")
         {
              let typeCar=veh as! Car
         cell.textLabel?.numberOfLines=8
@@ -123,10 +123,12 @@ class ShowEmployeeDetailsViewController: UIViewController,UITableViewDelegate,UI
             cell.textLabel?.numberOfLines=8
             details="\nEmployee has a : \(typeMotorcycle.type)\nMake : \(typeMotorcycle.make)\nPlate number : \(typeMotorcycle.plate)\nModel : \(typeMotorcycle.model)\nYear : \(typeMotorcycle.yMake)"
         }
-        else if typeveh.type.elementsEqual("")
-        {
-            details="Employee Has no vehicle"
-        }
+       else if typeveh.type.elementsEqual("Transit")
+             {
+                cell.textLabel?.numberOfLines=2
+                 details="Employee Has no vehicle. \nEmployee travels Via Transit"
+             }
+        
         cell.textLabel?.text="\(details)"
         print(details)
        return cell

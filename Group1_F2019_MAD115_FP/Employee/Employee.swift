@@ -47,8 +47,10 @@ class Employee
    
     func addVehicle(v:Vehicle) {
         vdict.updateValue(v, forKey: v.id)
-        print(vdict.keys)
+//        print(vdict.keys)
+//        print(vdict.values)
     }
+    
     func returnVehicleArray() -> Array<Vehicle>
      {
          var t : Array<Vehicle> = []

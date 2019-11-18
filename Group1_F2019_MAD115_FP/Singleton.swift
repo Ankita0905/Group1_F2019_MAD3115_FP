@@ -137,6 +137,8 @@ class Singleton : NSObject
     {
         let c1=Car(noOfDoors: 4, Make: "Honda", plate: "ABC101", model: "Civic", year: "2009", Cid: 1)
         let c2=Car(noOfDoors: 2, Make: "Ferrari", plate: "KAr123", model: "F1", year: "2018", Cid: 2)
+        let m1=Motorcycle(make: "BMW", plate: "KAR234", model: "RR1000", year: "2019", Mid: 2)
+        let t1=Transit()
         let i1=Intern(IempID: 1, IName: "Ankita Jain", ISchoolName: "Lambton", IEmpType: "Intern", IDOB: date,IEmail: "ankita@gmail.com")
     
         i1.addVehicle(v: c1)
@@ -145,14 +147,15 @@ class Singleton : NSObject
         let f1 = FullTime(FTEmpID: 2, FTEmptype: "FullTime", FTEmpName: "Karan Kumar", FTDob: date, FTEmail:"karan@gmail.com", Salary: 933.10, Bonus: 837.2)
        
         let c3=Car(noOfDoors: 2, Make: "Ferrari", plate: "KAr123", model: "F1", year: "2018", Cid: 1)
-       f1.addVehicle(v: c3)
-        let m1=Motorcycle(make: "BMW", plate: "KAR234", model: "RR1000", year: "2019", Mid: 2)
-       f1.addVehicle(v: m1)
+         f1.addVehicle(v: c3)
+         f1.addVehicle(v: m1)
          AddEmployee(employee: f1)
         let cPt1=CommissionBasedPartTime(ComTEmpID: 3, ComTEmptype: "CommissionBasedPT", ComTEmpName: "Sandeep",ComTEmail: "sandeep@gmail.com", ComTDob: date, Rate: 64.2, HoursWorked: 83.4, CommissionPer: 5)
-        AddEmployee(employee: cPt1)
+         cPt1.addVehicle(v: m1)
+         AddEmployee(employee: cPt1)
     
         let fbPt1=FixedBasedPartTime(FixTEmpID: 4, FixTEmptype: "FixedBasedPT", FixTEmpName: "Kamal", FixTDob: date, FixTEmail: "kamal@gmail.com", Rate: 46.4, HoursWorked: 64, FixedAmount: 32)
+        fbPt1.addVehicle(v: t1)
         AddEmployee(employee: fbPt1)
     }
     
