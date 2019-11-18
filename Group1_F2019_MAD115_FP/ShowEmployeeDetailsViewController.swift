@@ -30,34 +30,39 @@ class ShowEmployeeDetailsViewController: UIViewController,UITableViewDelegate,UI
     }
     @IBAction func btnDeleteVehiocle(_ sender: UIButton)
     {
-       // self.employeeDetails?.removevehicle(id: employeeDetails?.vdict.)
-        //self.showEditing()
+        //self.employeeDetails?.removevehicle(id: employeeDetails?.vdict.)
+        self.showEditing()
     }
-//    @objc func showEditing()
-//    {
-//        if(self.billListTable.isEditing == true)
-//        {
-//            self.billListTable.isEditing = false
-//            btndel.titleLabel?.text="Delete"
-//        }
-//        else
-//        {
-//            self.billListTable.isEditing = true
-//            btndel.titleLabel?.text="Done"
-//
-//        }
-//    }
-//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-//        if editingStyle == .delete {
-//           // self.billListTable.remove(at: indexPath.row)
-//            self.billListTable.deleteRows(at: [indexPath], with: .fade)
-//        }
-//        else if editingStyle == .insert {
-//            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-//        }
-//
-//    }
-//
+    @objc func showEditing()
+    {
+        if(self.billListTable.isEditing == true)
+        {
+            self.billListTable.isEditing = false
+            btndel.titleLabel?.text="Delete"
+        }
+        else
+        {
+            self.billListTable.isEditing = true
+            btndel.titleLabel?.text="Done"
+
+        }
+    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            //employeeDetails?.vdict.remove(at: indexPath.row)
+            print(employeeDetails!.t1)
+            self.employeeDetails!.t1.remove(at: indexPath.row)
+           // print(employeeDetails?.t1)
+           // print(employeeDetails?.returnVehicleArray())
+            self.billListTable.deleteRows(at: [indexPath], with: .fade)
+            self.viewWillAppear(true)
+        }
+        else if editingStyle == .insert {
+           
+        }
+
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -169,27 +174,6 @@ class ShowEmployeeDetailsViewController: UIViewController,UITableViewDelegate,UI
         print(details)
        return cell
         
-//        let currentBill = customerdetails!.billDictionary[indexPath.row + 1]
-//    var detail = ""
-//        if currentBill?.billType == billTypes.Mobile{
-//            cell.textLabel?.numberOfLines = 12
-//            let mobileBill = currentBill as! Mobile
-//          detail = "\nBill Type : Mobile \nManufacturer Name : \(mobileBill.mobileManufacturer) \nPlan Name : \(mobileBill.planName) \nMobile Number : \(mobileBill.mobileNumber) \nInternet used : \(mobileBill.internetUsed.data()) \nMinutes Used : \(mobileBill.minuteUsed.minutes()) "
-//        } else {
-//            if currentBill?.billType == billTypes.Hydro{
-//                cell.textLabel?.numberOfLines = 12
-//                let hydroBill = currentBill as! Hydro
-//                detail = "\nBill Type : Hydro \nAgency Name : \(hydroBill.agencyName) \nUnit Consumed : \(hydroBill.unitconsumed.unit())"
-//            } else {
-//                if currentBill?.billType == billTypes.Internet{
-//                    cell.textLabel?.numberOfLines = 12
-//                    let internetBill = currentBill as! Internet
-//                    detail = "\nBill Type : Internet \nProvider Name : \(internetBill.providerName) \nInternet Used : \(internetBill.internetUsed.data())"
-//                }
-//            }
-//        }
-//       cell.textLabel?.text = "Bill ID : \(String(describing: currentBill!.Id)) \nBill Date : \(String(describing: currentBill!.billDate.getForamttedDate())) \nBill Total : \(String(describing: currentBill!.totalBillAmount.currency())) \(detail)"
-        //cell.textLabel?.text="\(details)"
         
     }
 

@@ -17,6 +17,7 @@ class Employee
     var employeeDictionary  = [Int:Employee]()
     
     var vdict = Dictionary<Int, Vehicle>()
+    var t1 : Array<Vehicle> = []
     
     init(EmpID : Int,EmpName:String,EmpDOB: Date,EmpType: String,EmpEmail: String)
     {
@@ -58,10 +59,12 @@ class Employee
     func returnVehicleArray() -> Array<Vehicle>
      {
          var t : Array<Vehicle> = []
+         
          for i in vdict.values
          {
              t.append(i)
          }
-         return t
+        t1=t
+         return t1
      }
 }
