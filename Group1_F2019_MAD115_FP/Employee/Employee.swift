@@ -15,10 +15,8 @@ class Employee
     var empType : String
     var empEmail :String
     var employeeDictionary  = [Int:Employee]()
-    
     var vdict = Dictionary<Int, Vehicle>()
     var t1 : Array<Vehicle> = []
-    
     init(EmpID : Int,EmpName:String,EmpDOB: Date,EmpType: String,EmpEmail: String)
     {
         empID=EmpID

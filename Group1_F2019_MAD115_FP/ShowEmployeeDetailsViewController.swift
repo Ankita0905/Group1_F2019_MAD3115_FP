@@ -54,7 +54,7 @@ class ShowEmployeeDetailsViewController: UIViewController,UITableViewDelegate,UI
             self.employeeDetails!.t1.remove(at: indexPath.row)
            // print(employeeDetails?.t1)
            // print(employeeDetails?.returnVehicleArray())
-            self.billListTable.deleteRows(at: [indexPath], with: .fade)
+            //self.billListTable.deleteRows(at: [indexPath], with: .fade)
             self.viewWillAppear(true)
         }
         else if editingStyle == .insert {
