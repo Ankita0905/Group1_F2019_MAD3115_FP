@@ -47,26 +47,13 @@ class ShowEmployeeDetailsViewController: UIViewController,UITableViewDelegate,UI
 
         }
     }
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            //employeeDetails?.vdict.remove(at: indexPath.row)
-            print(employeeDetails!.t1)
-            self.employeeDetails!.t1.remove(at: indexPath.row)
-           // print(employeeDetails?.t1)
-           // print(employeeDetails?.returnVehicleArray())
-            //self.billListTable.deleteRows(at: [indexPath], with: .fade)
-            self.viewWillAppear(true)
-        }
-        else if editingStyle == .insert {
-           
-        }
-
-    }
+    
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        employeeDetails?.t1 = (employeeDetails?.returnVehicleArray())!
         //Intern employee
         if employeeDetails?.empType=="Intern"
         {
@@ -138,7 +125,7 @@ class ShowEmployeeDetailsViewController: UIViewController,UITableViewDelegate,UI
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (employeeDetails?.returnVehicleArray().count)!
+        return (employeeDetails?.t1.count)!
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -146,7 +133,7 @@ class ShowEmployeeDetailsViewController: UIViewController,UITableViewDelegate,UI
 //        let a = i.returnVehicleObj(Id: Int(indexPath.row+1))
 //        print(a!.id)
        // cell.textLabel!.text = (a!.plate)
-        let vArray=employeeDetails!.returnVehicleArray()
+        let vArray=employeeDetails!.t1
         let veh=vArray[indexPath.row]
        var details=""
         var typeveh=veh as! Vehicle
@@ -175,6 +162,22 @@ class ShowEmployeeDetailsViewController: UIViewController,UITableViewDelegate,UI
        return cell
         
         
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            //employeeDetails?.vdict.remove(at: indexPath.row)
+            print(employeeDetails!.t1)
+            self.employeeDetails!.t1.remove(at: indexPath.row)
+           // print(employeeDetails?.t1)
+           // print(employeeDetails?.returnVehicleArray())
+            self.billListTable.deleteRows(at: [indexPath], with: .fade)
+          //  self.viewWillAppear(true)
+        }
+        else if editingStyle == .insert {
+           
+        }
+
     }
 
     override func viewWillAppear(_ animated: Bool) {
